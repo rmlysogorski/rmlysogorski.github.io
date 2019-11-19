@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/transition.css">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Round&display=swap" rel="stylesheet">
+    <title>Richard Lysogorski C# .NET Developer</title>
+</head>
+<body>
+    <!--Header-->
+    <div class="row topLayer">
+        <div class="fl logo col-lg-2 col-3 col-s-4">
+            <div class="first">Richard</div>
+            <hr class="logoSlash" />
+            Lysogorski
+            <div class="developer">C# .NET Developer</div>
+        </div>
+        <div class="socialBox col-lg-10 col-9 col-s-8">
+            <div><span class="socialButtonText">Github</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="images/github.svg"></div></div></div>
+            <div><span class="socialButtonText">LinkedIn</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="images/linkedin.svg"></div></div></div>
+            <div><span class="socialButtonText">E-mail</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="images/email.svg"></div></div></div>
+            <div><span class="socialButtonText">Resume</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="images/cv.svg"></div></div></div>
+        </div>
+    </div>
+    <div class="row secondLayer"><div class="col-lg-12 col-12 col-s-12"></div></div>
+    <!--Body-->
+    <div class="row">
+        <div class="parallaxBg parallax"></div>
+        <!--Nav Menu Begins-->
+        <div id='page' class="hide col-lg-12 col-12 col-s-12">
+            <div id='screenDiv' class="projectScreen"></div>
+            <div class="navigationContainer">
+                <divclass="navigation">
+                    Projects<br>
+                    ==========
+                    <ul>
+                        <!--Current Project List Begins-->
+                        <li id="current" class="liTop">
+                            <a href='#' onClick='toggleCollapse("current", "currentList");return false;'>
+                                    <label class="button">Current Project</label>
+                            </a>
+                        </li>
+                            <ul id="currentList" name="list" style="display: block;">
+                                <li class="liSecond"><a href="javascript:delay('projects/bugtracker.html')" onClick='animatePage();'><label class="button">Bug Tracker</label></a></li>
+                            </ul>
+                        
+                        <!--Solo Project List Begins-->
+                        <li id="solo" class="liTop">
+                            <a href='#' onClick='toggleCollapse("solo", "soloList");return false;'>
+                                    <label class="button">Solo Projects</label>
+                            </a>
+                        </li>
+                            <ul id="soloList" name="list" style="display: block;">
+                                <li class="liSecond"><a href="javascript:delay('projects/solitaire.html')" onClick='animatePage();'><label class="button">Solitaire</label></a></li>
+                                <li class="liSecond"><a href="javascript:delay('projects/carddeckapi.html')" onClick='animatePage();return false;'><label class="button">Card Deck API</label></a></li>
+                                <li class="liSecond"><a href="javascript:delay('projects/cc.html')" onClick='animatePage();return false;'><label class="button">Simple Cipher</label></a></li>
+                            </ul>
+
+                        <!--Bootcamp Project List Begins-->
+                        <li id="bootcamp" class="liTop">
+                            <a href='#' onClick='toggleCollapse("bootcamp", "bootcampList");return false;'>
+                                    <label class="button">Bootcamp Projects</label>
+                            </a>
+                        </li>
+                            <ul id="bootcampList" name="list" style="display: block;">
+                                <li class="liSecond"><a href="javascript:delay('projects/unspace.html')" onClick='animatePage();return false;'><label class="button">UnSpace</label></a></li>
+                                <li class="liSecond"><a href="javascript:delay('projects/movieapi.html')" onClick='animatePage();return false;'><label class="button">Movie Database API</label></a></li>
+                                <li class="liSecond"><a href="javascript:delay('projects/pos.html')" onClick='animatePage();return false;'><label class="button">POS Terminal</label></a></li>
+                            </ul>
+                        <li id="about" class="liSecond">
+                            <a href="javascript:delay('about.html')" onClick='animatePage();return false;'>
+                                <label class="button">About Me</label>
+                            </a>
+                        </li>
+                    </ul>
+                    <!--Settings Menu Begins-->
+                    <span>Settings / Toggles</span><br />
+                    ===============<br />
+                    <a href='#' onclick="toggleFlicker();return false;">
+                            <label id='flicker' class="button">Screen Flicker</label>
+                    </a>
+                    <br />
+                    <a href='#' onclick="toggleButtonAnimation();return false;">
+                            <label class="button">Link Animations</label>
+                    </a>
+                    <br />
+                    <a href='#' onclick="expandAll();return false;">
+                            <label class="button">Expand All</label>
+                    </a>
+                    <br />
+                    <a href='#' onclick="collapseAll();return false;">
+                            <label class="button">Collapse All</label>
+                    </a>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <!--Nav Menu Ends-->
+    <!--Footer-->
+    <div class="row bottomSecondLayer"><div class="col-lg-12 col-12 col-s-12"></div></div>
+    <div class="row bottomFirstLayer"><div class="col-lg-12 col-12 col-s-12"></div>
+        <div class="socialBoxBot col-">
+            <div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="images/github.svg"></div></div>
+            <div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="images/linkedin.svg"></div></div>
+            <div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="images/email.svg"></div></div>
+            <div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="images/cv.svg"></div></div>
+        </div>
+    </div>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
+<script src="js/animations.js"></script>
+<script src="js/toggles.js"></script>
+</body>
+</html>

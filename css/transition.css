@@ -1,0 +1,121 @@
+.hide{
+	visibility: hidden;
+}
+
+.loaded{
+	min-height: 100vh;
+	animation: animate_in 2.5s ease;
+	visibility: visible;
+}
+
+.fade-in{
+	visibility: visible;
+	animation: fade_in 2.5s ease;
+}
+
+.fade-left{
+	visibility: visible;
+	animation: fade_left 3s ease;
+}
+
+.rush-up{
+	visibility: visible;
+	animation: rush_up 3s ease;
+	animation-fill-mode: forwards;
+}
+
+@keyframes rush_up{
+	0%{
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	60%{
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes fade_in{
+	0%{
+		left: 0;
+		transform: scale(.1, .1);
+		transform: translateY(50%);
+		opacity: 0;
+	}
+	60%{
+		left: 0;
+		transform: scale(.1, .1);
+		transform: translateY(50%);
+		opacity: 0;
+	}
+	100%{
+		left: 0;
+		transform: scale(1, 1);
+		opacity: 1;
+	}
+}
+
+@keyframes fade_left{
+	0%{
+		left: 0;
+		transform: scale(.1, .1);
+		transform: translateX(35%);
+		opacity: 0;
+	}
+	70%{
+		left: 0;
+		transform: scale(.1, .1);
+		transform: translateX(35%);
+		opacity: 0;
+	}
+	100%{
+		left: 0;
+		transform: scale(1, 1);
+		opacity: 1;
+	}
+}
+
+@keyframes animate_in{
+	0%{
+		transform: scale(0.1, 0.002);
+		opacity: 0;
+    }
+	30%{
+		transform: scale(0.3, 0.002);
+		opacity: 0.3;
+
+	}
+	45%{
+		transform: scale(1, 0.002);
+		opacity: 0.5;
+
+    }
+	100%{
+		transform: scale(1, 1);
+		opacity: 1;
+    }
+}
+
+.animate_out{
+	animation: animate_out 1s ease;
+	height: 100vh;
+}
+
+@keyframes animate_out{
+	10%{
+		transform: scale(1, 0.002);
+    }
+	50%{
+		transform: scale(0.2, 0.002);
+		opacity: 1;
+
+    }
+	100%{
+		transform: scale(0.1, 0.002);
+		opacity: 0;
+
+    }
+}

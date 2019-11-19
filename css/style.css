@@ -1,0 +1,791 @@
+html{
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/*Set the background image and font*/
+body{
+  font-family: 'Nova Round', cursive;
+  color: whitesmoke;
+  padding: 0;
+  margin: 0;
+}
+
+.topLayer{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#777777+1,d1d1d1+100 */
+  background: rgb(119,119,119); /* Old browsers */
+  background: -moz-linear-gradient(left,  rgba(119,119,119,1) 1%, rgba(209,209,209,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(119,119,119,1) 1%,rgba(209,209,209,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(119,119,119,1) 1%,rgba(209,209,209,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#d1d1d1',GradientType=1 ); /* IE6-9 */
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100%;
+  z-index: 300;
+}
+
+.secondLayer{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#777777+1,d1d1d1+100 */
+  background: rgb(119,119,119); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(119,119,119,1) 1%, rgba(209,209,209,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(119,119,119,1) 1%,rgba(209,209,209,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(119,119,119,1) 1%,rgba(209,209,209,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#d1d1d1',GradientType=0 ); /* IE6-9 */
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.4);
+  position: fixed;
+  height: 8.25em;
+  width: 100%;
+  z-index: 200;
+}
+
+.bottomFirstLayer{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d1d1d1+0,777777+99 */
+  background: rgb(209,209,209); /* Old browsers */
+  background: -moz-linear-gradient(left,  rgba(209,209,209,1) 0%, rgba(119,119,119,1) 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(209,209,209,1) 0%,rgba(119,119,119,1) 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(209,209,209,1) 0%,rgba(119,119,119,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#777777',GradientType=1 ); /* IE6-9 */
+  box-shadow: 0 -2px 5px 0 rgb(0, 0, 0, 0.4);
+  position: fixed;
+  height: 3em;
+  bottom: 0;
+  width: 100%;
+  z-index: 300;
+}
+
+.bottomSecondLayer{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d1d1d1+0,777777+99 */
+  background: rgb(209,209,209); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(209,209,209,1) 0%, rgba(119,119,119,1) 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(209,209,209,1) 0%,rgba(119,119,119,1) 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(209,209,209,1) 0%,rgba(119,119,119,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#777777',GradientType=0 ); /* IE6-9 */
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.4);
+  position: fixed;
+  height: 4em;
+  bottom: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+.fl{
+  float: left;
+  display: block;
+}
+
+.center{
+  text-align: center;
+}
+
+/*Clear formats from anchor links*/
+a, a:link, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: inherit;
+  font-weight: inherit;
+}
+
+.bannerWrapper{
+  display: none;
+}
+
+.banner{
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.socialBox{
+  margin-top: 0.5em;
+  display: none;
+  justify-content: space-around;
+}
+
+.socialBoxBot{
+  margin-top: 0.45em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.swWrapper{
+  box-shadow: 0 0 2px 1px rgb(12, 31, 83);
+  border-radius: 100%;
+  display: inline-flex;
+}
+
+.socialWrapper{
+  background-color: rgb(238, 238, 238);
+  border-radius: 100%;
+  padding: 0.5em;
+  text-align: center;
+  display: inline;
+  box-shadow: inset 0 0 2px 1px gray;
+}
+
+.socialWrapper:hover{
+  background-color: cornsilk;
+}
+
+.socialButton{
+  width: 1.25em;
+}
+
+.socialButtonOdd{
+  margin-bottom: 1em;
+}
+
+.socialButtonEven{
+  margin-top: 1em;
+}
+
+.contentWrapper{
+  margin: 1em;
+  border: 1px solid gray;
+  border-width: 0.2em;
+  border-radius: 1em;
+  box-shadow: inset 0 0 5px 2px rgb(54, 87, 177);
+}
+
+.contentBanner{
+  width: 100%;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-top: 1em;
+  color: whitesmoke;
+  display: block;
+}
+
+.dashedHr{
+  border-top: 1px dashed whitesmoke;
+  border-bottom: 1px dashed whitesmoke;
+  border-width: 0.05em;
+  width: 75%;
+  height: 0.25em;
+  display: inline-block;
+}
+
+.blue{
+  background-color: rgb(54, 87, 177);
+}
+
+.imgRowWrapper{
+  display: block;
+  text-align: center;
+}
+
+.imgRow{
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+.gridImg {
+  margin-top: 2em;
+  vertical-align: middle;
+  width: 95%;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  border-radius: 1em;
+}
+
+.imgCol{
+  -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+}
+
+.socialButtonText{
+  visibility: hidden;
+}
+
+.projectTitle{
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  padding-top: 5em;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0 0 10px rgb(0, 0, 0, 0.4);
+}
+
+.projectDiscWrapper{
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  width: 100vw;
+  border: none;
+}
+
+.projectDisc{
+  text-align: left;
+  background-color: whitesmoke;
+  color: black;
+  padding: 1em;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 600px) {
+  .projectTitle{
+    font-size: 2.5em;
+    padding-top: 3em;
+  }
+
+  .contentWrapper{
+    position: absolute;
+    left: 40%;
+    top: 1em;
+  }
+
+  .socialBox{
+    display: flex;
+    margin-bottom: 0;
+    margin-top: 1.25em;
+    justify-content: space-around;
+  }
+
+  .socialBoxBot{
+    display: none;
+  }
+  
+  .socialWrapper{
+    padding: 1em;
+  }
+
+  .socialButton{
+    width: 2.5em;
+  }
+
+  .bannerWrapper{
+    display: block;
+  }
+
+  .imgCol{
+    -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .projectDiscWrapper{
+    left: 21.25vw;
+    width: 60vw;
+    margin-top: 6em;
+  }
+
+  .projectDisc{
+    padding: 3em;
+  }
+
+  .contentWrapper{
+    position: absolute;
+    left: 33%;
+    top: 1em;
+  }
+
+  .socialButtonText{
+    visibility: visible;
+    font-size: 1.75em;
+    margin-right: 0.35em;
+    vertical-align: text-bottom;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .contentWrapper{
+    position: absolute;
+    left: 25%;
+    top: 1em;
+  }
+
+}
+
+/*Set up ul and li items for the navigation menu*/
+/*When they can be expanded, li elements will have a '-' next to them
+but when clicked on that will change to a '+' and the contents display
+will be changed from 'none' to 'block'. The content was styled inline
+because the javascript function would not work on the first click
+otherwise*/
+ul{
+  padding:1em;
+  padding-top: 0;
+  list-style-type: none;
+}
+
+.liTop{
+  margin-bottom: 0;
+}
+
+.liTop::before{
+  content: '- ';
+  margin-left: -1.15em;
+}
+
+.liTop2{
+  margin-bottom: 0.5em;
+}
+
+.liTop2::before{
+  content: '+ ';
+  margin-left: -1.15em;
+}
+
+.liSecond::before{
+  content: '> ';
+  margin-left: -1.15em;
+}
+
+/*This sets up the animations for the buttons in the menu*/
+/*Users can toggle off the animations which changes the className
+from 'button' to 'noButton' using the toggleButtonAnimations()
+function. The animations were set up using labels for the anchor
+links to make it easier to control the style*/
+.noButton{
+  background-size: 100%;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  position: absolute;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.button:after, .button:before {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}    
+.button {
+  -moz-transition: opacity 300ms;
+  -o-transition: opacity 300ms;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  position: absolute;
+  cursor: pointer;
+  z-index: 99;
+}
+.button:after {
+  -moz-box-shadow: rgba(212, 207, 201, 0.75) 0 0 15px 2px;
+  -webkit-box-shadow: rgba(212, 207, 201, 0.75) 0 0 15px 2px;
+  box-shadow: rgba(212, 207, 201, 0.75) 0 0 15px 2px;
+  background: rgb(250, 251, 229);
+  content: "";
+  width: 2px;
+  opacity: 0;
+}
+.button:before {
+  content: "";
+  opacity: 0;
+}
+.button:hover {
+  animation: glitch .75s infinite;
+}
+.button:hover:before {
+  opacity: 1;
+}
+.button:hover:after {
+  animation: scan 2s infinite;
+  opacity: 1;
+}
+
+.projectImg{
+  max-width: 90vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: left;
+  position: fixed;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.4;
+  z-index: -50;
+}
+
+@keyframes glitch {
+  0% {
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+  }
+  5% {
+    -moz-transform: skewX(2deg);
+    -ms-transform: skewX(2deg);
+    -webkit-transform: skewX(2deg);
+    transform: skewX(2deg);
+    opacity: 0.75;
+  }
+  10% {
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+    opacity: 1;
+  }
+  15% {
+    -moz-transform: skewX(-5deg);
+    -ms-transform: skewX(-5deg);
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 0.75;
+  }
+  20% {
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+    opacity: 1;
+  }
+  45% {
+    -moz-transform: skewX(3deg);
+    -ms-transform: skewX(3deg);
+    -webkit-transform: skewX(3deg);
+    transform: skewX(3deg);
+    opacity: 0.75;
+  }
+  50% {
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+    opacity: 1;
+  }
+  55% {
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+    opacity: 0.75;
+  }
+  60% {
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+    opacity: 1;
+  }
+  75% {
+    -moz-transform: skewX(2deg);
+    -ms-transform: skewX(2deg);
+    -webkit-transform: skewX(2deg);
+    transform: skewX(2deg);
+  }
+  80% {
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+  }
+  85% {
+    -moz-transform: skewX(-8deg);
+    -ms-transform: skewX(-8deg);
+    -webkit-transform: skewX(-8deg);
+    transform: skewX(-8deg);
+    opacity: 0.75;
+  }
+  90% {
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+  }
+}
+@keyframes scan {
+  0% {
+    left: -5%;
+  }
+  50% {
+    left: 105%;
+  }
+  100% {
+    left: -5%;
+  }
+}
+
+/*Set properties for the logo/name*/
+.logo{
+  padding: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0;
+  font-size: 2em;
+  line-height: 1.05em;
+  position: relative;
+
+}
+
+.logoSlash{
+  padding: 0;
+  margin: 0;
+  width: 3.75em;
+  height: 1px;
+  color: black;
+  left: 1.75em;
+  position: absolute;
+}
+
+.first{
+  padding-left: 1em;
+}
+
+.developer{
+  font-size: 0.5em;
+  padding-left: 0.5em;
+}
+
+/*Set up the navigation menu*/
+.parallaxBg{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#192119+0,465b47+50,192119+100 */
+  background: rgb(25,33,25); /* Old browsers */
+  background: -moz-linear-gradient(45deg,  rgba(25,33,25,1) 0%, rgba(70,91,71,1) 50%, rgba(25,33,25,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg,  rgba(25,33,25,1) 0%,rgba(70,91,71,1) 50%,rgba(25,33,25,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg,  rgba(25,33,25,1) 0%,rgba(70,91,71,1) 50%,rgba(25,33,25,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#192119', endColorstr='#192119',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+}
+
+.navigationContainer{
+  font-size: 1.5em;
+  border: none;
+  color: rgb(71, 209, 58);
+  margin: 1em;
+  padding-top: 5.5em;
+  padding-bottom: 3em;
+  position: absolute;
+  min-width: 100vw;
+}
+
+.projectScreen{
+  background-color: rgba(9, 61, 29, 0.3);
+  border: none;
+  position: fixed;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.navigation{
+  border: none;
+  box-shadow: inset 0 0 6px 2px gray;
+  font-size: 3em;
+  padding: 1em;
+  padding-top: 8em;
+  padding-bottom: 5em;
+  margin: 1px;
+  /* -webkit-animation: tvflicker .2s infinite alternate; 
+  -moz-animation:    tvflicker .5s infinite alternate; 
+  -o-animation:      tvflicker .5s infinite alternate; 
+  animation:         tvflicker .5s infinite alternate;  */
+}
+
+.flicker::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(9, 9, 10, 0.2);
+  opacity: 0;
+  z-index: 201;
+  pointer-events: none;
+  animation: flicker .5s infinite;
+}
+
+.flicker::before{
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(5, 13, 36, 0.089) 50%, rgba(1, 10, 37, 0.171)50%), linear-gradient(90deg, rgba(34, 65, 38, 0.06), rgba(11, 66, 19, 0.02), rgba(0, 93, 23, 0.06));
+  z-index: 201;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .navigation, .navigationNoFlicker{
+    padding-top: 3em;
+    font-size: 4em;
+  }
+  .navigationContainer{
+    font-size: 2.5em;
+    padding-top: 3em;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.52976;
+  }
+  5% {
+    opacity: 0.84988;
+  }
+  10% {
+    opacity: 0.618;
+  }
+  15% {
+    opacity: 0.50963;
+  }
+  20% {
+    opacity: 0.51592;
+  }
+  25% {
+    opacity: 0.23951;
+  }
+  30% {
+    opacity: 0.95812;
+  }
+  35% {
+    opacity: 0.99433;
+  }
+  40% {
+    opacity: 0.61145;
+  }
+  45% {
+    opacity: 0.36656;
+  }
+  50% {
+    opacity: 0.66717;
+  }
+  55% {
+    opacity: 0.13071;
+  }
+  60% {
+    opacity: 0.2876;
+  }
+  65% {
+    opacity: 0.57718;
+  }
+  70% {
+    opacity: 0.95311;
+  }
+  75% {
+    opacity: 0.47958;
+  }
+  80% {
+    opacity: 0.90308;
+  }
+  85% {
+    opacity: 0.78235;
+  }
+  90% {
+    opacity: 0.89521;
+  }
+  95% {
+    opacity: 0.53212;
+  }
+  100% {
+    opacity: 0.53292;
+  }
+}
+
+/* @-webkit-keyframes tvflicker {
+  0%   { box-shadow: inset 0 0 20px 0 rgba(1, 11, 17, 0.828); }
+  100% { box-shadow: inset 0 0 5px 0 rgba(173, 173, 173, 0.45); }
+}
+@-moz-keyframes tvflicker {
+  0%   { box-shadow: inset 0 0 20px 0 rgba(1, 11, 17, 0.4); }
+  100% { box-shadow: inset 0 0 5px 0 rgba(28, 32, 36, 0.45); }
+}
+@-o-keyframes tvflicker {
+  0%   { box-shadow: inset 0 0 20px 0 rgba(1, 11, 17, 0.4); }
+  100% { box-shadow: inset 0 0 5px 0 rgba(28, 32, 36, 0.45); }
+}
+@keyframes tvflicker {
+  0%   { box-shadow: inset 0 0 20px 0 rgba(1, 11, 17, 0.828); }
+  100% { box-shadow: inset 0 0 5px 0 rgba(173, 173, 173, 0.45); }
+} */
+
+/*Make sure that the border and padding are included in total width/height */
+* {
+  box-sizing: border-box;
+}
+
+/*Clear the flow so we can float columns left*/
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*Setting up the columns*/
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+  float: left;
+}
+
+  /* For tablets: */
+@media only screen and (min-width: 600px) {
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+  /* For desktop: */
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 1200px) {
+  .col-lg-1 {width: 8.33%;}
+  .col-lg-2 {width: 16.66%;}
+  .col-lg-3 {width: 25%;}
+  .col-lg-4 {width: 33.33%;}
+  .col-lg-5 {width: 41.66%;}
+  .col-lg-6 {width: 50%;}
+  .col-lg-7 {width: 58.33%;}
+  .col-lg-8 {width: 66.66%;}
+  .col-lg-9 {width: 75%;}
+  .col-lg-10 {width: 83.33%;}
+  .col-lg-11 {width: 91.66%;}
+  .col-lg-12 {width: 100%;}
+}
