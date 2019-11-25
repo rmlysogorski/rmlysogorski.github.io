@@ -30,12 +30,21 @@
     <div class="row">
         <div class="parallaxBg parallax"></div>
         <!--Nav Menu Begins-->
-        <div id='page' class="hide col-lg-12 col-12 col-s-12">
+        <div id='page' class="col-lg-12 col-12 col-s-12">
+            <script>
+                document.getElementById('page').classList.add('hide');    
+            </script>
             <div id='screenDiv' class="projectScreen"></div>
                 <div style="width: 100vw;font-size: 1.5em;">
                     <img class="projectImg" src="../images/projectImages/solitaire.png">
-                    <div id="title" class="projectTitle hide">>>Solitaire<<<br />=============</div>
-                    <div id="settings" class="hide" style="text-align: center;">
+                    <div id="title" class="projectTitle">>>Solitaire<<<br />=============</div>
+                    <script>
+                        document.getElementById('title').classList.add('hide');    
+                    </script>
+                    <div id="settings" style="text-align: center;">
+                        <script>
+                            document.getElementById('settings').classList.add('hide');    
+                        </script>
                         <a href='#' onclick="toggleFlicker();return false;">
                                 <label id='flicker' class="button" style="position: relative;">Screen Flicker</label>
                         </a> /
@@ -43,7 +52,10 @@
                                 <label class="button"  style="position: relative;">Link Animations</label>
                         </a>
                     </div>
-                    <div id="description" class="projectDiscWrapper hide">
+                    <div id="description" class="projectDiscWrapper">
+                        <script>
+                            document.getElementById('description').classList.add('hide');    
+                        </script>
                         <div class="projectDisc">
                             <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
                             <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>

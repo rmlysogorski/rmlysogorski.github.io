@@ -30,7 +30,10 @@
     <div class="row">
         <div class="parallaxBg parallax"></div>
         <!--Nav Menu Begins-->
-        <div id='page' class="hide col-lg-12 col-12 col-s-12">
+        <div id='page' class="col-lg-12 col-12 col-s-12">
+            <script>
+                document.getElementById('page').classList.add('hide');    
+            </script>
             <div id='screenDiv' class="projectScreen"></div>
             <div class="navigationContainer">
                 <divclass="navigation">
@@ -54,7 +57,7 @@
                             </a>
                         </li>
                             <ul id="soloList" name="list" style="display: block;">
-                                <li class="liSecond"><a href="javascript:delay('projects/solitaire.html')" onClick='animatePage();'><label class="button">Solitaire</label></a></li>
+                                <li class="liSecond"><a href="javascript:delay('projects/solitaire.html')" onClick='animatePage();'><noscript><a href='projects/solitaire.html'></noscript><label class="button">Solitaire</label><noscript></a></noscript></a></li>
                                 <li class="liSecond"><a href="javascript:delay('projects/carddeckapi.html')" onClick='animatePage();return false;'><label class="button">Card Deck API</label></a></li>
                                 <li class="liSecond"><a href="javascript:delay('projects/cc.html')" onClick='animatePage();return false;'><label class="button">Simple Cipher</label></a></li>
                             </ul>
