@@ -36,12 +36,12 @@
             </script>
             <div id='screenDiv' class="projectScreen"></div>
                 <div style="width: 100vw;font-size: 1.5em;">
-                    <img class="projectImg" src="../images/projectImages/solitaire.png">
+                    <img class="projectImg" src="../images/projectImages/solitaire/solitaire.png">
                     <div id="title" class="projectTitle">>>Solitaire<<<br />=============</div>
                     <script>
                         document.getElementById('title').classList.add('hide');    
                     </script>
-                    <div id="settings" style="text-align: center;">
+                    <div id="settings" class="projSettings">
                         <script>
                             document.getElementById('settings').classList.add('hide');    
                         </script>
@@ -57,9 +57,27 @@
                             document.getElementById('description').classList.add('hide');    
                         </script>
                         <div class="projectDisc">
+                            <h1 class="objectives">Objectives:</h1>
                             <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
+                            <br />
+                            <!--Slideshow Begins-->
+                            <div style="text-align: center;"><span>(Click to enlarge.)</span></div>
+                            <div class="slideshow">
+                                <img class="slide" src="../images/projectImages/solitaire/solitaire01_small.PNG" style="width:100%">
+                                <img class="slide" src="../images/projectImages/solitaire/solitaire02_small.PNG" style="width:100%">
+                                <img class="slide" src="../images/projectImages/solitaire/solitaire03_small.PNG" style="width:100%">
+                                <button class="slideshowLeftButton" onclick="changeSlide(-1)">&#10094;</button>
+                                <button class="slideshowRightButton" onclick="changeSlide(1)">&#10095;</button>
+                            </div>
+                            <div style="text-align:center">
+                                <span class="dot" onclick="currentSlide(0)"></span>
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                            </div>
+                            <!--Slideshow Ends-->
+                            <h1 class="objectives">Challenges:</h1>
                             <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
-                            <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
+                            <h1 class="objectives">Takeaways:</h1>
                             <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
                             <div style="height: 2.5em;"></div>
                         </div>
@@ -82,5 +100,33 @@
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
 <script src="../js/animations.js"></script>
 <script src="../js/toggles.js"></script>
+<script>
+        var slideIndex = 0;
+        activateSlideshow(slideIndex);
+        
+        function changeSlide(n) {
+            activateSlideshow(slideIndex += n);
+        }
+        
+        function currentSlide(n){
+            activateSlideshow(slideIndex = n);
+        }
+
+        function activateSlideshow(n) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            var dots = document.getElementsByClassName("dot");
+            if (n >= slides.length) {slideIndex = 0}
+            if (n < 0) {slideIndex = slides.length - 1}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("activeDot");
+            }
+            slides[slideIndex].style.display = "block";
+            dots[slideIndex].classList.add("activeDot"); 
+        }
+        </script>
 </body>
 </html>
