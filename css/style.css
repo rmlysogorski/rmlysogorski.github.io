@@ -683,12 +683,12 @@ links to make it easier to control the style*/
 
   /*Position*/
   position: absolute;
-  left: -12px;
+  top: -7.5px;
 
   /*Border*/
-  border-right: 12px solid whitesmoke;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
+  border-right: 13px solid transparent;
+  border-left: 13px solid transparent;
+  border-bottom: 7.5px solid;
 }
 
 .hex {
@@ -700,14 +700,13 @@ links to make it easier to control the style*/
   margin-left: 8px;
 
   /*Size*/
-  width: 23px;
-  height: 40px;
+  width: 26px;
+  height: 15px;
 
   /*Position*/
   position: relative;
 
   /*Background*/
-  background-color: whitesmoke;
 }
 
 .hex:after {
@@ -716,20 +715,37 @@ links to make it easier to control the style*/
 
   /*Size*/
   width: 0;
+  height: 0;
 
   /*Position*/
   position: absolute;
-  right: -12px;
+  bottom: -7.5px;
 
   /*Border*/
-  border-left: 12px solid whitesmoke;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
+  border-top: 7.5px solid ;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
 }
 
 .hex.even{
   /*Spacing*/
   margin-top: 20px;
+}
+
+.blue{
+  background-color: rgb(58, 67, 109);
+}
+
+.blue:before{
+  border-bottom-color: rgb(58, 67, 109);
+}
+
+.blue:after{
+  border-top-color: rgb(58, 67, 109);
+}
+
+.techName{
+  margin-left: 0.5em;
 }
 
 /*Set properties for the logo/name*/
