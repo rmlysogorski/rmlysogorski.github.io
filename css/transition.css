@@ -24,6 +24,23 @@
 	animation-fill-mode: forwards;
 }
 
+.backX-in{
+	visibility: visible;
+	animation: backX-in 1.5s ease;
+}
+
+@keyframes backX-in{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.6;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
 @keyframes rush_up{
 	0%{
 		transform: translateY(100%);

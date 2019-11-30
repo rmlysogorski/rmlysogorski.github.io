@@ -13,12 +13,12 @@
 <body>
     <!--Header-->
     <div class="row topLayer">
-        <div class="fl logo col-lg-2 col-3 col-s-4">
+        <a href="../index.html"><div class="fl logo col-lg-2 col-3 col-s-4">
             <div class="first">Richard</div>
             <hr class="logoSlash" />
             Lysogorski
             <div class="developer">C# .NET Developer</div>
-        </div>
+        </div></a>
         <div class="socialBox col-lg-10 col-9 col-s-8">
             <div><span class="socialButtonText">Github</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/github.svg"></div></div></div>
             <div><span class="socialButtonText">LinkedIn</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/linkedin.svg"></div></div></div>
@@ -34,17 +34,21 @@
         <div id='page' class="col-lg-12 col-12 col-s-12">
             <!--Modal Begins-->
             <div id="modal" class="modal">
-                    <span class="close">&times;</span>
-                    <a id="imgLink" href="#"><img class="modal-content" id="img01"></a>
-                    <div id="caption" style="visibility: hidden;">Click to download full-sized image.</div>
-                </div>
-                <!--Modal Ends-->
+                <span class="close">&times;</span>
+                <a id="imgLink" href="#"><img class="modal-content" id="img01"></a>
+                <div id="caption" style="visibility: hidden;">Click to download full-sized image.</div>
+            </div>
+            <!--Modal Ends-->
             <script>
                 document.getElementById('page').classList.add('hide');    
             </script>
             <div id='screenDiv' class="projectScreen"></div>
                 <div style="width: 100vw;font-size: 1.5em;">
                     <img class="projectImg" src="../images/projectImages/solitaire/solitaire.png">
+                    <a href="../index.html"><div id="backX" class="backX">X</div></a>
+                    <script>
+                        document.getElementById('backX').classList.add('hide');
+                    </script>
                     <div id="title" class="projectTitle">>>Solitaire<<<br />=============</div>
                     <script>
                         document.getElementById('title').classList.add('hide');    
@@ -65,11 +69,9 @@
                             document.getElementById('description').classList.add('hide');    
                         </script>
                         <div class="projectDisc">
-                            <h1 class="objectives" style="float: left; margin-top: 0.4em;">Tech Utilized:</h1>
                             <!--Tech Hexes Begin-->
-                                <div style="vertical-align: middle; font-size: 1em; float:left;  margin-left: 1em; margin-top: 1.4em;">
-                                    <div class="hex blue"></div><span class="techName">C#</span>
-                                    <div class="hex blue"></div><span class="techName">Visual Studio</span>
+                                <div style="vertical-align: top; font-size: 1em; float:right;  margin-left: 1em;">
+                                    <span class="techName">C#</span><span class="techName">|</span><span class="techName">Visual Studio</span>
                                 </div>
                             <!--Tech Hexes End-->
                             <div style="clear: both;"></div>
@@ -96,6 +98,7 @@
                             <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
                             <h1 class="objectives">Takeaways:</h1>
                             <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
+                            <p class="githubTextLink"><a href="https://github.com/rmlysogorski/Solitaire">Check it out on github</a></p>
                             <div style="height: 2.5em;"></div>
                         </div>
                     </div>

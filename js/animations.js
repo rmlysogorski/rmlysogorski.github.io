@@ -4,6 +4,7 @@ window.addEventListener("load", () => {
     var t = document.getElementById('title');
     var set = document.getElementById('settings');
     var d = document.getElementById('description');
+    var x = document.getElementById('backX');
 
     p.classList.add("loaded");
     p.style.overflow = 'hidden';
@@ -19,6 +20,10 @@ window.addEventListener("load", () => {
 
     if(d){
         d.classList.add("rush-up");
+    }
+
+    if(x){
+        setTimeout(function(){ x.classList.add('backX-in')}, 2000);
     }
 
 });
