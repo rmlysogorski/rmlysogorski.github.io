@@ -11,9 +11,11 @@ html{
 body{
   font-family: 'Nova Round', cursive;
   color: whitesmoke;
+  background-color: black;
   padding: 0;
   margin: 0;
 }
+
 /*Make sure that the border and padding are included in total width/height */
 * {
   box-sizing: border-box;
@@ -732,7 +734,7 @@ links to make it easier to control the style*/
 #screenBackground{
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#192119+0,465b47+50,192119+100 */
   background: rgb(25,33,25); /* Old browsers */
-  background: -moz-linear-gradient(45deg,  rgba(25,33,25,1) 0%, rgba(70,91,71,1) 50%, rgba(25,33,25,1) 100%); /* FF3.6-15 */
+  background: -moz-linear-gradient(45deg,  rgba(25,33,25, 1) 0%, rgba(70,91,71,1) 50%, rgba(25,33,25,1) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(45deg,  rgba(25,33,25,1) 0%,rgba(70,91,71,1) 50%,rgba(25,33,25,1) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(45deg,  rgba(25,33,25,1) 0%,rgba(70,91,71,1) 50%,rgba(25,33,25,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#192119', endColorstr='#192119',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
@@ -870,5 +872,63 @@ links to make it easier to control the style*/
   }
   100% {
     opacity: 0.53292;
+  }
+}
+
+#contactForm{
+  margin-top: 0;
+}
+
+.formLabel{
+  display: block;
+  margin-top: 1em;
+}
+
+.formField{
+  display: block;
+  font-size: 0.8em;
+  color: whitesmoke;
+  background-color: rgba(20, 26, 21, 0.5);
+  border: none;
+  width: 90vw;
+  padding: 0.5em;
+}
+
+.formField:focus{
+  border: none;
+  outline-color: chartreuse;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: whitesmoke;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(20, 26, 21, 0.5) inset;
+  box-shadow: 0 0 0px 1000px rgba(20, 26, 21, 0.5) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#submitButton{
+  display: block;
+  padding: 10px;
+  padding-left:30px;
+  padding-right: 30px;
+  margin-top: 1em;
+  border: none;
+  color: inherit;
+  background-color: rgba(20, 26, 21, 0.5);
+}
+
+@media only screen and (min-width: 600px) {
+  .formField{
+    width: 350px;
   }
 }
