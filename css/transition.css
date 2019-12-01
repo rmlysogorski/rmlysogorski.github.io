@@ -2,6 +2,10 @@
 	visibility: hidden;
 }
 
+.hideCompletely{
+	display: none;
+}
+
 .loaded{
 	min-height: 100vh;
 	animation: animate_in 2.5s ease;

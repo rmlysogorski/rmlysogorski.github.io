@@ -16,7 +16,7 @@ function toggleCollapse(button, list){
 }
 
 function toggleFlicker(){
-    var nav = document.getElementById('screenDiv');
+    var nav = document.getElementById('projectScreen');
 
     if(nav.classList.contains('flicker')){
         nav.classList.remove('flicker');

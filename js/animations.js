@@ -1,9 +1,9 @@
 window.addEventListener("load", () => {
     var p = document.getElementById('page');
-    var s = document.getElementById('screenDiv');
-    var t = document.getElementById('title');
-    var set = document.getElementById('settings');
-    var d = document.getElementById('description');
+    var s = document.getElementById('projectScreen');
+    var t = document.getElementById('projectTitle');
+    var set = document.getElementById('projectSettings');
+    var d = document.getElementById('projectDescriptionWrapper');
     var x = document.getElementById('backX');
 
     p.classList.add("loaded");

@@ -11,173 +11,178 @@
     <title>Richard Lysogorski C# .NET Developer</title>
 </head>
 <body>
-    <!--Header-->
-    <div class="row topLayer">
-        <a href="../index.html"><div class="fl logo col-lg-2 col-3 col-s-4">
-            <div class="first">Richard</div>
-            <hr class="logoSlash" />
-            Lysogorski
-            <div class="developer">C# .NET Developer</div>
-        </div></a>
-        <div class="socialBox col-lg-10 col-9 col-s-8">
-            <div><span class="socialButtonText">Github</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/github.svg"></div></div></div>
-            <div><span class="socialButtonText">LinkedIn</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/linkedin.svg"></div></div></div>
-            <div><span class="socialButtonText">E-mail</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/email.svg"></div></div></div>
-            <div><span class="socialButtonText">Resume</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/cv.svg"></div></div></div>
+    <!--Header Begins-->
+    <div id="topLayer" class="row col-">
+        <!--Logo Begins-->
+        <div id="logo" class="col-lg-2 col-3 col-s-4">
+            <a href="../index.html">
+                <div id="first">Richard</div>
+                <hr id="logoSlash" />
+                Lysogorski
+                <div id="developer">C# .NET Developer</div>
+            </a>
         </div>
+        <!--Logo Ends-->
+        <!--Social Buttons Begin-->
+        <div class="socialBox col-lg-10 col-9 col-s-8">
+            <div><a href="https://github.com/rmlysogorski"><span class="socialButtonText">Github</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/github.svg" width="1.25em"></div></div></a></div>
+            <div><a href="https://www.linkedin.com/in/rmlysogorski/"><span class="socialButtonText">LinkedIn</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/linkedin.svg" width="1.25em"></div></div></a></div>
+            <div><span class="socialButtonText">E-mail</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/email.svg" width="1.25em"></div></div></div>
+            <div><span class="socialButtonText">Resume</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/cv.svg" width="1.25em"></div></div></div>
+        </div>
+        <!--Social Buttons End-->
     </div>
-    <div class="row secondLayer"><div class="col-lg-12 col-12 col-s-12"></div></div>
-    <!--Body-->
+    <div id="secondLayer" class="row col-"></div>
+    <!--Header Ends-->
+    <!--Body Begins-->
     <div class="row">
-        <div class="parallaxBg parallax"></div>
-        <!--Nav Menu Begins-->
-        <div id='page' class="col-lg-12 col-12 col-s-12">
-            <!--Modal Begins-->
-            <div id="modal" class="modal">
-                <span class="close">&times;</span>
-                <a id="imgLink" href="#"><img class="modal-content" id="img01"></a>
-                <div id="caption" style="visibility: hidden;">Click to download full-sized image.</div>
-            </div>
-            <!--Modal Ends-->
+        <!--Sets up the green background glow-->
+        <div id="screenBackground"></div>
+        <!--Page Content Begins-->
+        <div id='page' class="col-">
             <script>
                 document.getElementById('page').classList.add('hide');    
             </script>
-            <div id='screenDiv' class="projectScreen"></div>
-                <div style="width: 100vw;font-size: 1.5em;">
-                    <img class="projectImg" src="../images/projectImages/solitaire/solitaire.png">
-                    <a href="../index.html"><div id="backX" class="backX">X</div></a>
+            <!--Modal Begins-->
+            <!--This sets up the overlay for viewing full-size images. Hidden by default-->
+            <div id="modal" class="modal">
+                <span id="close">&times;</span>
+                <a id="imgLink" href="#"><img id="modalImg" class="modal-content"></a>
+                <div id="caption">Click to download full-sized image.</div>
+            </div>
+            <!--Modal Ends-->
+            <!--Project Content Begins-->
+            <!--Sets up 'screen' as is the basis for the flicker animation-->
+            <div id="projectScreen"></div>
+            <div id="projectContainer">
+                <!--Sets up the background image for the project-->
+                <img id="projectImg" src="../images/projectImages/solitaire/solitaire.jpg">
+                <!--Sets up the 'X' in the corner that returns to the menu-->
+                <a href="../index.html"><div id="backX" class="backX">X</div></a>
+                <!--Hides the backX element for javascript animation-->
+                <script>
+                    document.getElementById('backX').classList.add('hide');
+                </script>
+                <!--Title Begins-->
+                <div id="projectTitle">>>Solitaire<<<br />=============</div>
+                <!--Hides the 'title' element for javascript animation-->
+                <script>
+                    document.getElementById('title').classList.add('hide');    
+                </script>
+                <!--Title Ends-->
+                <!--Project Settings Begin-->
+                <div id="projectSettings" class="hide">
+                    <!--Element is hidden by default for non-JS browsers because these links toggle JS animations-->
+                    <a href='#' onclick="toggleFlicker();return false;">
+                            <label id='flicker' class="button" style="position: relative;">Screen Flicker</label>
+                    </a> /
+                    <a href='#' onclick="toggleButtonAnimation();return false;">
+                            <label class="button"  style="position: relative;">Link Animations</label>
+                    </a>
+                </div>
+                <!--Project Settings End-->
+                <!--Project Description Begins-->
+                <div id="projectDescriptionWrapper">
+                    <!--Hides the 'projectDescriptionWrapper' for javascript animations-->
                     <script>
-                        document.getElementById('backX').classList.add('hide');
+                        document.getElementById('projectDescriptionWrapper').classList.add('hide');    
                     </script>
-                    <div id="title" class="projectTitle">>>Solitaire<<<br />=============</div>
-                    <script>
-                        document.getElementById('title').classList.add('hide');    
-                    </script>
-                    <div id="settings" class="projSettings">
-                        <script>
-                            document.getElementById('settings').classList.add('hide');    
-                        </script>
-                        <a href='#' onclick="toggleFlicker();return false;">
-                                <label id='flicker' class="button" style="position: relative;">Screen Flicker</label>
-                        </a> /
-                        <a href='#' onclick="toggleButtonAnimation();return false;">
-                                <label class="button"  style="position: relative;">Link Animations</label>
-                        </a>
-                    </div>
-                    <div id="description" class="projectDiscWrapper">
-                        <script>
-                            document.getElementById('description').classList.add('hide');    
-                        </script>
-                        <div class="projectDisc">
-                            <!--Tech Hexes Begin-->
-                                <div style="vertical-align: top; font-size: 1em; float:right;  margin-left: 1em;">
-                                    <span class="techName">C#</span><span class="techName">|</span><span class="techName">Visual Studio</span>
-                                </div>
-                            <!--Tech Hexes End-->
-                            <div style="clear: both;"></div>
-                            <h1 class="objectives">Objectives:</h1>
-                            <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
-                            <br />
-                            <!--Slideshow Begins-->
-                            <div style="text-align: center;"><span>(Click for full image.)</span></div>
-                            <div class="slideshow">
-                                <img class="slide" src="../images/projectImages/solitaire/solitaire01_small.PNG" style="width:100%">
-                                <img class="slide" src="../images/projectImages/solitaire/solitaire02_small.PNG" style="width:100%">
-                                <img class="slide" src="../images/projectImages/solitaire/solitaire03_small.PNG" style="width:100%">
-                                <button class="slideshowLeftButton" onclick="changeSlide(-1)"><</button>
-                                <button class="slideshowRightButton" onclick="changeSlide(1)">></button>
-                            </div>
-                            <div style="text-align:center">
-                                <span class="dot" onclick="currentSlide(0)"></span>
-                                <span class="dot" onclick="currentSlide(1)"></span>
-                                <span class="dot" onclick="currentSlide(2)"></span>
-                            </div>
-                            
-                            <!--Slideshow Ends-->
-                            <h1 class="objectives">Challenges:</h1>
-                            <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
-                            <h1 class="objectives">Takeaways:</h1>
-                            <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
-                            <p class="githubTextLink"><a href="https://github.com/rmlysogorski/Solitaire">Check it out on github</a></p>
-                            <div style="height: 2.5em;"></div>
+                    <div id="projectDescription">
+                        <!--Tech Utilized Begins-->
+                        <div id="techList">
+                            <span class="techName">C#</span><span class="techName">|</span><span class="techName">Visual Studio</span>
                         </div>
+                        <!--Tech Utilized Ends-->
+                        <div style="clear: both;"></div>
+                        <h1 class="projectHeading">Objectives:</h1>
+                        <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
+                        <br />
+                        <!--In the next section content is hidden or shown with javascript to enable a different no-JS layout-->
+                        <!--Slideshow Begins-->
+                        <div id="fullImage" class="hideCompletely"><span>(Click for full image.)</span></div>
+                        <script>
+                            document.getElementById('fullImage').classList.remove('hideCompletely');
+                        </script>
+                        <div id="slideshow">
+                            <script>
+                                document.getElementById('slideshow').classList.add('slideshowJS');    
+                            </script>
+                            <img class="slide" src="../images/projectImages/solitaire/solitaire01.jpg" style="width:100%">
+                            <h1 id="challenges1" class="projectHeading">Challenges:</h1>
+                            <p id="challengesPara1" class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>    
+                            <script>
+                                    document.getElementById('challenges1').classList.add('hideCompletely');
+                                    document.getElementById('challengesPara1').classList.add('hideCompletely');
+                            </script>
+                            <img class="slide" src="../images/projectImages/solitaire/solitaire02.jpg" style="width:100%">
+                            <h1 id="takeaways1" class="projectHeading">Takeaways:</h1>
+                            <p id="takeawaysPara1" class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>    
+                            <script>
+                                    document.getElementById('takeaways1').classList.add('hideCompletely');
+                                    document.getElementById('takeawaysPara1').classList.add('hideCompletely');
+                            </script>
+                            <img class="slide" src="../images/projectImages/solitaire/solitaire03.PNG" style="width:100%">
+                            <!--Buttons are hidden by default and enabled for javascript compatible browsers-->
+                            <button id="slideshowLeftButton" class="hide" onclick="changeSlide(-1)"><</button>
+                            <button id="slideshowRightButton" class="hide" onclick="changeSlide(1)">></button>
+                            <script>
+                                document.getElementById('slideshowLeftButton').classList.remove('hide');
+                                document.getElementById('slideshowRightButton').classList.remove('hide');
+                            </script>
+                        </div>
+                        <!--Dots Begin-->
+                        <div class="center">
+                            <!--Dots are hidden by default and enabled for javascript compatible browsers-->
+                            <span class="dot hide" onclick="currentSlide(0)"></span>
+                            <span class="dot hide" onclick="currentSlide(1)"></span>
+                            <span class="dot hide" onclick="currentSlide(2)"></span>
+                            <script>
+                                var dots = document.getElementsByClassName('dot');
+                                for(var i = 0; i < dots.length; i++){
+                                    dots[i].classList.remove('hide');
+                                }
+                            </script>
+                        </div>
+                        <!--Dots End-->
+                        <!--Slideshow Ends-->
+                        <h1 id="challenges2"  class="projectHeading hideCompletely">Challenges:</h1>
+                        <p id="challengesPara2" class="projectPara hideCompletely">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
+                        <script>
+                            document.getElementById('challenges2').classList.remove('hideCompletely');
+                            document.getElementById('challengesPara2').classList.remove('hideCompletely');
+                        </script>
+                        <h1 id="takeaways2" class="projectHeading hideCompletely">Takeaways:</h1>
+                        <p id="takeawaysPara2" class="projectPara hideCompletely">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
+                        <script>
+                            document.getElementById('takeaways2').classList.remove('hideCompletely');
+                            document.getElementById('takeawaysPara2').classList.remove('hideCompletely');
+                        </script>
+                        <p class="githubTextLink"><a href="https://github.com/rmlysogorski/Solitaire">Check it out on github</a></p>
+                        <div style="height: 2.5em;"></div>
                     </div>
                 </div>
+                <!--Project Description Ends-->
+            </div>
         </div>
-        <!--Nav Menu Ends-->
+        <!--Page Content Ends-->
     </div>
-    <!--Footer-->
-    <div class="row bottomSecondLayer"><div class="col-lg-12 col-12 col-s-12"></div></div>
-    <div class="row bottomFirstLayer"><div class="col-lg-12 col-12 col-s-12"></div>
+    <!--Body Ends-->
+    <!--Footer Begins-->
+    <div id="bottomSecondLayer" class="row col-"></div>
+    <div id="bottomFirstLayer" class="row col-">
+        <!--This div is hidden for over 600px width screens-->
         <div class="socialBoxBot col-">
-            <div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/github.svg"></div></div>
-            <div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/linkedin.svg"></div></div>
+            <a href="https://github.com/rmlysogorski"><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/github.svg"></div></div></a>
+            <a href="https://www.linkedin.com/in/rmlysogorski/"><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/linkedin.svg"></div></div></a>
             <div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/email.svg"></div></div>
             <div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/cv.svg"></div></div>
         </div>
     </div>
+    <!--Footer Ends-->
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
 <script src="../js/animations.js"></script>
 <script src="../js/toggles.js"></script>
-<script>
-        var slideIndex = 0;
-        var imgArray = [
-            "../images/projectImages/solitaire/solitaire01.PNG",
-            "../images/projectImages/solitaire/solitaire02.PNG",
-            "../images/projectImages/solitaire/solitaire03.PNG"
-        ];
-        
-        var modal = document.getElementById("modal");
-        var captionText = document.getElementById("caption");
-        
-        var slides = document.getElementsByClassName("slide");
-
-        var modalImg = document.getElementById("img01");
-        var settings = document.getElementById("settings");
-
-        var imgLink = document.getElementById('imgLink');
-        var span = document.getElementsByClassName("close")[0];
-
-        activateSlideshow(slideIndex);
-        
-        function changeSlide(n) {
-            activateSlideshow(slideIndex += n);
-        }
-        
-        function currentSlide(n){
-            activateSlideshow(slideIndex = n);
-        }
-
-        function activateSlideshow(n) {
-            var i;
-            var dots = document.getElementsByClassName("dot");
-            if (n >= slides.length) {slideIndex = 0}
-            if (n < 0) {slideIndex = slides.length - 1}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].classList.remove("activeDot");
-            }
-            slides[slideIndex].style.display = "block";
-            dots[slideIndex].classList.add("activeDot");
-
-            slides[slideIndex].onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = imgArray[slideIndex];
-                settings.style.visibility = 'hidden';
-                captionText.style.visibility = 'visible';
-            } 
-
-            imgLink.href = imgArray[slideIndex];
-        }
-
-        span.onclick = function() { 
-            modal.style.display = "none";
-            settings.style.visibility = 'visible';
-            captionText.style.visibility = 'hidden';
-        }
-</script>
+<script src="../js/slideshow.js"></script>
 </body>
 </html>

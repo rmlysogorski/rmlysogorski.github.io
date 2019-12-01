@@ -1,3 +1,4 @@
+/*Initialize global properties */
 html{
   font-size: 12px;
   padding: 0;
@@ -13,8 +14,75 @@ body{
   padding: 0;
   margin: 0;
 }
+/*Make sure that the border and padding are included in total width/height */
+* {
+  box-sizing: border-box;
+}
 
-.topLayer{
+/*Clear the flow so we can float columns left*/
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*Setting up the columns*/
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+  float: left;
+}
+
+  /* For tablets: */
+@media only screen and (min-width: 600px) {
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+  /* For desktop: */
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 1200px) {
+  .col-lg-1 {width: 8.33%;}
+  .col-lg-2 {width: 16.66%;}
+  .col-lg-3 {width: 25%;}
+  .col-lg-4 {width: 33.33%;}
+  .col-lg-5 {width: 41.66%;}
+  .col-lg-6 {width: 50%;}
+  .col-lg-7 {width: 58.33%;}
+  .col-lg-8 {width: 66.66%;}
+  .col-lg-9 {width: 75%;}
+  .col-lg-10 {width: 83.33%;}
+  .col-lg-11 {width: 91.66%;}
+  .col-lg-12 {width: 100%;}
+}
+
+/*Set up the background color and size / index properties for the top and bottom straps*/
+#topLayer{
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#777777+1,d1d1d1+100 */
   background: rgb(119,119,119); /* Old browsers */
   background: -moz-linear-gradient(left,  rgba(119,119,119,1) 1%, rgba(209,209,209,1) 100%); /* FF3.6-15 */
@@ -27,7 +95,7 @@ body{
   z-index: 300;
 }
 
-.secondLayer{
+#secondLayer{
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#777777+1,d1d1d1+100 */
   background: rgb(119,119,119); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(119,119,119,1) 1%, rgba(209,209,209,1) 100%); /* FF3.6-15 */
@@ -41,7 +109,7 @@ body{
   z-index: 200;
 }
 
-.bottomFirstLayer{
+#bottomFirstLayer{
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d1d1d1+0,777777+99 */
   background: rgb(209,209,209); /* Old browsers */
   background: -moz-linear-gradient(left,  rgba(209,209,209,1) 0%, rgba(119,119,119,1) 99%); /* FF3.6-15 */
@@ -56,7 +124,7 @@ body{
   z-index: 300;
 }
 
-.bottomSecondLayer{
+#bottomSecondLayer{
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d1d1d1+0,777777+99 */
   background: rgb(209,209,209); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(209,209,209,1) 0%, rgba(119,119,119,1) 99%); /* FF3.6-15 */
@@ -71,11 +139,6 @@ body{
   z-index: 200;
 }
 
-.fl{
-  float: left;
-  display: block;
-}
-
 .center{
   text-align: center;
 }
@@ -87,17 +150,37 @@ a, a:link, a:visited, a:hover, a:active {
   font-weight: inherit;
 }
 
-.bannerWrapper{
-  display: none;
+/*Set properties for the logo/name*/
+#logo{
+  padding: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0;
+  font-size: 2em;
+  line-height: 1.05em;
+  position: relative;
+
 }
 
-.banner{
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-  text-align: center;
-  font-size: 1.25em;
+#logoSlash{
+  padding: 0;
+  margin: 0;
+  width: 3.75em;
+  height: 1px;
+  color: whitesmoke;
+  left: 1.75em;
+  position: absolute;
 }
 
+#first{
+  padding-left: 1em;
+}
+
+#developer{
+  font-size: 0.5em;
+  padding-left: 0.5em;
+}
+
+/*Set up the boxes that display the social media / email links */
 .socialBox{
   margin-top: 0.5em;
   display: none;
@@ -111,7 +194,7 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 .swWrapper{
-  box-shadow: 0 0 2px 1px rgb(12, 31, 83);
+  box-shadow: 0 0 2px 1px rgb(0, 15, 1);
   border-radius: 100%;
   display: inline-flex;
 }
@@ -126,256 +209,15 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 .socialWrapper:hover{
-  background-color: cornsilk;
+  background-color: rgb(121, 194, 49);
 }
 
 .socialButton{
   width: 1.25em;
 }
 
-.socialButtonOdd{
-  margin-bottom: 1em;
-}
-
-.socialButtonEven{
-  margin-top: 1em;
-}
-
-.contentWrapper{
-  margin: 1em;
-  border: 1px solid gray;
-  border-width: 0.2em;
-  border-radius: 1em;
-  box-shadow: inset 0 0 5px 2px rgb(54, 87, 177);
-}
-
-.contentBanner{
-  width: 100%;
-  font-size: 2em;
-  text-align: center;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  margin-top: 1em;
-  color: whitesmoke;
-  display: block;
-}
-
-.dashedHr{
-  border-top: 1px dashed whitesmoke;
-  border-bottom: 1px dashed whitesmoke;
-  border-width: 0.05em;
-  width: 75%;
-  height: 0.25em;
-  display: inline-block;
-}
-
-.blue{
-  background-color: rgb(54, 87, 177);
-}
-
-.imgRowWrapper{
-  display: block;
-  text-align: center;
-}
-
-.imgRow{
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 1em;
-}
-
-.gridImg {
-  margin-top: 2em;
-  vertical-align: middle;
-  width: 95%;
-  justify-content: center;
-  flex-wrap: wrap;
-  border: 1px solid black;
-  border-radius: 1em;
-}
-
-.imgCol{
-  -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-}
-
 .socialButtonText{
   visibility: hidden;
-}
-
-.projectTitle{
-  font-size: 1.5em;
-  text-align: center;
-  position: relative;
-  padding-top: 5em;
-  left: 50%;
-  transform: translateX(-50%);
-  text-shadow: 0 0 4px rgb(0, 15, 1);
-  color: white;
-}
-
-.projectDiscWrapper{
-  margin-top: 1em;
-  margin-left: auto;
-  margin-right: auto;
-  position: absolute;
-  width: 100vw;
-  border: none;
-}
-
-.projectDisc{
-  text-align: left;
-  background-color: whitesmoke;
-  color: black;
-  padding: 0.4em 1em;
-  display: inline-block;
-}
-
-.projSettings{
-  text-align: center; 
-  font-size: 0.75em;
-  text-shadow: 0 0 4px rgb(0, 15, 1);
-}
-
-.objectives{
-  margin-top: 0em;
-  font-size: 1em;
-}
-
-.projectPara{
-  font-size: 0.9em;
-}
-
-.githubTextLink{
-  font-size: 1em;
-  text-align: right;
-  font-weight: 700;
-  text-decoration: underline;
-  margin-right: 1em;
-}
-
-.backX{
-  position: absolute;
-  font-size: 1em;
-  color: whitesmoke;
-  font-weight: 800;
-  text-shadow: 1px 1px rgba(3, 29, 0, 0.8);
-  top: 130px;
-  right: 5vw;
-  z-index: 199;
-}
-
-.backX:hover{
-  color: gray;
-}
-
-
-@media only screen and (min-width: 600px) {
-  .backX{
-    right: 15vw;
-  }
-
-  .projectImg{
-    max-width: 90vw;
-  }
-  
-  .objectives{
-    font-size: 1.5em;
-  }
-  
-  .projSettings{ 
-    font-size: 1em
-  }
-  
-  .projectDiscWrapper{
-    left: 9vw;
-    width: 80vw;
-    margin-top: 6em;
-    box-shadow: 0 0 3px 5px whitesmoke;
-  }
-  
-  .projectTitle{
-    font-size: 2.5em;
-    padding-top: 3em;
-  }
-
-  .contentWrapper{
-    position: absolute;
-    left: 40%;
-    top: 1em;
-  }
-
-  .socialBox{
-    display: flex;
-    margin-bottom: 0;
-    margin-top: 1.25em;
-    justify-content: space-around;
-  }
-
-  .socialBoxBot{
-    display: none;
-  }
-  
-  .socialWrapper{
-    padding: 1em;
-  }
-
-  .socialButton{
-    width: 2.5em;
-  }
-
-  .bannerWrapper{
-    display: block;
-  }
-
-  .imgCol{
-    -ms-flex: 50%;
-      flex: 50%;
-      max-width: 50%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-    
-  .projSettings{ 
-    font-size: 1.25em
-  }
-
-  .projectDiscWrapper{
-    left: 11.25vw;
-    width: 75vw;
-    margin-top: 6em;
-  }
-
-  .projectDisc{
-    padding: 3em;
-    padding-top: 1em;
-  }
-
-  .contentWrapper{
-    position: absolute;
-    left: 33%;
-    top: 1em;
-  }
-
-  .socialButtonText{
-    visibility: visible;
-    font-size: 1.75em;
-    margin-right: 0.35em;
-    vertical-align: text-bottom;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .contentWrapper{
-    position: absolute;
-    left: 25%;
-    top: 1em;
-  }
-
 }
 
 /*Set up ul and li items for the navigation menu*/
@@ -434,7 +276,8 @@ links to make it easier to control the style*/
   position: absolute;
   right: 0;
   top: 0;
-}    
+} 
+
 .button {
   -moz-transition: opacity 300ms;
   -o-transition: opacity 300ms;
@@ -447,6 +290,7 @@ links to make it easier to control the style*/
   cursor: pointer;
   z-index: 99;
 }
+
 .button:after {
   -moz-box-shadow: rgba(212, 207, 201, 0.75) 0 0 15px 2px;
   -webkit-box-shadow: rgba(212, 207, 201, 0.75) 0 0 15px 2px;
@@ -456,91 +300,26 @@ links to make it easier to control the style*/
   width: 2px;
   opacity: 0;
 }
+
 .button:before {
   content: "";
   opacity: 0;
 }
+
 .button:hover {
   animation: glitch .75s infinite;
 }
+
 .button:hover:before {
   opacity: 1;
 }
+
 .button:hover:after {
   animation: scan 2s infinite;
   opacity: 1;
 }
 
-.projectImg{
-  max-width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  object-position: left;
-  position: fixed;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.2;
-  z-index: -50;
-}
-
-.slideshow{
-  position: relative;
-}
-
-.slideshowLeftButton{
-  position: absolute;
-  border-radius: 100%;
-  top: 50%;
-  left: 1%;
-  transform: translate(0%,-50%);
-  background-color: rgba(24, 24, 24, 0.4);
-  color: whitesmoke;
-  outline: none;
-  border: none;
-  overflow: hidden;
-  padding: 0.5em;
-  width: 2em;
-  height: 2em;
-  vertical-align: middle;
-}
-
-.slideshowRightButton{
-  position: absolute;
-  border-radius: 100%;
-  top: 50%;
-  right: 1%;
-  transform: translate(0%,-50%);
-  background-color: rgba(24, 24, 24, 0.4);
-  color: whitesmoke;
-  outline: none;
-  border: none;
-  overflow: hidden;
-  padding: 0.5em;
-  width: 2em;
-  height: 2em;
-  vertical-align: middle;
-}
-
-.slideshowLeftButton:hover, .slideshowRightButton:hover{
-  background-color: rgba(24, 24, 24, 1);
-}
-
-.dot{
-  cursor: pointer;
-  height: 1em;
-  width: 1em;
-  margin: 0.4em 0.1em;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.activeDot, .dot:hover {
-  background-color: #717171;
-}
-
+/*Sets up the animation for hovering over links*/
 @keyframes glitch {
   0% {
     -moz-transform: skewX(0deg);
@@ -637,6 +416,7 @@ links to make it easier to control the style*/
     transform: skewX(0deg);
   }
 }
+
 @keyframes scan {
   0% {
     left: -5%;
@@ -647,6 +427,248 @@ links to make it easier to control the style*/
   100% {
     left: -5%;
   }
+}
+
+/* Set up properties for the Project Display pages*/
+
+#projectTitle{
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  padding-top: 5em;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0 0 4px rgb(0, 15, 1);
+  color: white;
+}
+
+#projectDescriptionWrapper{
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  width: 100vw;
+  border: none;
+}
+
+#techList{
+  vertical-align: top; 
+  font-size: 1em; 
+  float:right;  
+  margin-left: 1em;
+}
+
+.techName{
+  margin-left: 0.5em;
+}
+
+#projectDescription{
+  text-align: left;
+  background-color: whitesmoke;
+  color: black;
+  padding: 0.4em 1em;
+  display: inline-block;
+}
+
+#projectSettings{
+  text-align: center; 
+  font-size: 0.75em;
+  text-shadow: 0 0 4px rgb(0, 15, 1);
+}
+
+.projectHeading{
+  margin-top: 0em;
+  font-size: 1em;
+}
+
+.projectPara{
+  font-size: 0.9em;
+}
+
+.githubTextLink{
+  font-size: 1em;
+  text-align: right;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-right: 1em;
+}
+
+/*This is not the same 'X' that shows up with the modal*/
+.backX{
+  position: absolute;
+  font-size: 1em;
+  color: whitesmoke;
+  font-weight: 800;
+  text-shadow: 1px 1px rgba(3, 29, 0, 0.8);
+  top: 130px;
+  right: 5vw;
+  z-index: 199;
+}
+
+.backX:hover{
+  color: gray;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .backX{
+    right: 15vw;
+  }
+
+  #projectImg{
+    max-width: 90vw;
+  }
+  
+  .projectHeading{
+    font-size: 1.5em;
+  }
+  
+  #projectSettings{ 
+    font-size: 1em
+  }
+  
+  #projectDescriptionWrapper{
+    left: 9vw;
+    width: 80vw;
+    margin-top: 6em;
+    box-shadow: 0 0 3px 5px whitesmoke;
+  }
+  
+  #projectTitle{
+    font-size: 2.5em;
+    padding-top: 3em;
+  }
+
+  .socialBox{
+    display: flex;
+    margin-bottom: 0;
+    margin-top: 1.25em;
+    justify-content: space-around;
+  }
+
+  .socialBoxBot{
+    display: none;
+  }
+  
+  .socialWrapper{
+    padding: 1em;
+  }
+
+  .socialButton{
+    width: 2.5em;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+    
+  #projectSettings{ 
+    font-size: 1.25em
+  }
+
+  #projectDescriptionWrapper{
+    left: 11.25vw;
+    width: 75vw;
+    margin-top: 6em;
+  }
+
+  #projectDescription{
+    padding: 3em;
+    padding-top: 1em;
+  }
+
+  .socialButtonText{
+    visibility: visible;
+    font-size: 1.75em;
+    margin-right: 0.35em;
+    vertical-align: text-bottom;
+  }
+}
+
+#projectImg{
+  max-width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: left;
+  position: fixed;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.2;
+  z-index: -50;
+}
+
+#fullImage{
+  text-align: center;
+}
+
+/*Sets up the properties for the slideshow (JS-only)*/
+#slideshow{
+  position: relative;
+}
+
+.slideshowJS{
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.slide{
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5em;
+}
+
+#slideshowLeftButton{
+  position: absolute;
+  border-radius: 100%;
+  top: 50%;
+  left: 1%;
+  transform: translate(0%,-50%);
+  background-color: rgba(24, 24, 24, 0.4);
+  color: whitesmoke;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  padding: 0.5em;
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+}
+
+#slideshowRightButton{
+  position: absolute;
+  border-radius: 100%;
+  top: 50%;
+  right: 1%;
+  transform: translate(0%,-50%);
+  background-color: rgba(24, 24, 24, 0.4);
+  color: whitesmoke;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  padding: 0.5em;
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+}
+
+#slideshowLeftButton:hover, #slideshowRightButton:hover{
+  background-color: rgba(24, 24, 24, 1);
+}
+
+.dot{
+  cursor: pointer;
+  height: 1em;
+  width: 1em;
+  margin: 0.4em 0.1em;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activeDot, .dot:hover {
+  background-color: #717171;
 }
 
 /* The Modal (background) */
@@ -673,7 +695,7 @@ links to make it easier to control the style*/
 }
 
 /* The Close Button */
-.close {
+#close {
   text-align: right;
   margin: auto;
   display: block;
@@ -685,8 +707,8 @@ links to make it easier to control the style*/
   transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+#close:hover,
+#close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
@@ -704,113 +726,10 @@ links to make it easier to control the style*/
   height: 150px;
 }
 
-.hex:before {
-  /*Content*/
-  content: " ";
 
-  /*Size*/
-  width: 0; 
-  height: 0;
-
-  /*Position*/
-  position: absolute;
-  top: -7.5px;
-
-  /*Border*/
-  border-right: 13px solid transparent;
-  border-left: 13px solid transparent;
-  border-bottom: 7.5px solid;
-}
-
-.hex {
-  /*Layout*/
-  display:inline-block;
-  vertical-align: top;
-
-  /*Spacing*/
-  margin-left: 8px;
-
-  /*Size*/
-  width: 26px;
-  height: 15px;
-
-  /*Position*/
-  position: relative;
-
-  /*Background*/
-}
-
-.hex:after {
-  /*Content*/
-  content: " ";
-
-  /*Size*/
-  width: 0;
-  height: 0;
-
-  /*Position*/
-  position: absolute;
-  bottom: -7.5px;
-
-  /*Border*/
-  border-top: 7.5px solid ;
-  border-left: 13px solid transparent;
-  border-right: 13px solid transparent;
-}
-
-.hex.even{
-  /*Spacing*/
-  margin-top: 20px;
-}
-
-.blue{
-  background-color: rgb(58, 67, 109);
-}
-
-.blue:before{
-  border-bottom-color: rgb(58, 67, 109);
-}
-
-.blue:after{
-  border-top-color: rgb(58, 67, 109);
-}
-
-.techName{
-  margin-left: 0.5em;
-}
-
-/*Set properties for the logo/name*/
-.logo{
-  padding: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0;
-  font-size: 2em;
-  line-height: 1.05em;
-  position: relative;
-
-}
-
-.logoSlash{
-  padding: 0;
-  margin: 0;
-  width: 3.75em;
-  height: 1px;
-  color: whitesmoke;
-  left: 1.75em;
-  position: absolute;
-}
-
-.first{
-  padding-left: 1em;
-}
-
-.developer{
-  font-size: 0.5em;
-  padding-left: 0.5em;
-}
 
 /*Set up the navigation menu*/
-.parallaxBg{
+#screenBackground{
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#192119+0,465b47+50,192119+100 */
   background: rgb(25,33,25); /* Old browsers */
   background: -moz-linear-gradient(45deg,  rgba(25,33,25,1) 0%, rgba(70,91,71,1) 50%, rgba(25,33,25,1) 100%); /* FF3.6-15 */
@@ -834,7 +753,7 @@ links to make it easier to control the style*/
   min-width: 100vw;
 }
 
-.projectScreen{
+#projectScreen{
   background-color: rgba(9, 61, 29, 0.3);
   border: none;
   position: fixed;
@@ -842,18 +761,9 @@ links to make it easier to control the style*/
   width: 100vw;
 }
 
-.navigation{
-  border: none;
-  box-shadow: inset 0 0 6px 2px gray;
-  font-size: 3em;
-  padding: 1em;
-  padding-top: 8em;
-  padding-bottom: 5em;
-  margin: 1px;
-  /* -webkit-animation: tvflicker .2s infinite alternate; 
-  -moz-animation:    tvflicker .5s infinite alternate; 
-  -o-animation:      tvflicker .5s infinite alternate; 
-  animation:         tvflicker .5s infinite alternate;  */
+#projectContainer{
+  width: 100vw;
+  font-size: 1.5em;
 }
 
 .flicker::after {
@@ -886,16 +796,17 @@ links to make it easier to control the style*/
 }
 
 @media only screen and (min-width: 600px) {
-  .navigation, .navigationNoFlicker{
-    padding-top: 3em;
-    font-size: 4em;
-  }
   .navigationContainer{
     font-size: 2.5em;
     padding-top: 3em;
   }
+
+  .slideshowJS{
+    max-height: 350px;
+  }
 }
 
+/*The flicker animation*/
 @keyframes flicker {
   0% {
     opacity: 0.52976;
@@ -960,88 +871,4 @@ links to make it easier to control the style*/
   100% {
     opacity: 0.53292;
   }
-}
-
-/* @-webkit-keyframes tvflicker {
-  0%   { box-shadow: inset 0 0 20px 0 rgba(1, 11, 17, 0.828); }
-  100% { box-shadow: inset 0 0 5px 0 rgba(173, 173, 173, 0.45); }
-}
-@-moz-keyframes tvflicker {
-  0%   { box-shadow: inset 0 0 20px 0 rgba(1, 11, 17, 0.4); }
-  100% { box-shadow: inset 0 0 5px 0 rgba(28, 32, 36, 0.45); }
-}
-@-o-keyframes tvflicker {
-  0%   { box-shadow: inset 0 0 20px 0 rgba(1, 11, 17, 0.4); }
-  100% { box-shadow: inset 0 0 5px 0 rgba(28, 32, 36, 0.45); }
-}
-@keyframes tvflicker {
-  0%   { box-shadow: inset 0 0 20px 0 rgba(1, 11, 17, 0.828); }
-  100% { box-shadow: inset 0 0 5px 0 rgba(173, 173, 173, 0.45); }
-} */
-
-/*Make sure that the border and padding are included in total width/height */
-* {
-  box-sizing: border-box;
-}
-
-/*Clear the flow so we can float columns left*/
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/*Setting up the columns*/
-
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
-  float: left;
-}
-
-  /* For tablets: */
-@media only screen and (min-width: 600px) {
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-
-  /* For desktop: */
-@media only screen and (min-width: 768px) {
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
-
-@media only screen and (min-width: 1200px) {
-  .col-lg-1 {width: 8.33%;}
-  .col-lg-2 {width: 16.66%;}
-  .col-lg-3 {width: 25%;}
-  .col-lg-4 {width: 33.33%;}
-  .col-lg-5 {width: 41.66%;}
-  .col-lg-6 {width: 50%;}
-  .col-lg-7 {width: 58.33%;}
-  .col-lg-8 {width: 66.66%;}
-  .col-lg-9 {width: 75%;}
-  .col-lg-10 {width: 83.33%;}
-  .col-lg-11 {width: 91.66%;}
-  .col-lg-12 {width: 100%;}
 }
