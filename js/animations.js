@@ -23,6 +23,7 @@ window.addEventListener("load", () => {
     }
 
     if(x){
+        x.onclick = function(){ animatePage(); }
         setTimeout(function(){ x.classList.add('backX-in')}, 2000);
     }
 

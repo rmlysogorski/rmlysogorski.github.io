@@ -4,48 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/transition.css">
     <link href="https://fonts.googleapis.com/css?family=Nova+Round&display=swap" rel="stylesheet">
     <title>Richard Lysogorski C# .NET Developer</title>
 </head>
 <body>
-    <!--Header-->
-    <div class="row topLayer">
-        <div class="fl logo col-lg-3 col-4 col-s-5">
-            <div class="first">Richard</div>
-            <hr class="logoSlash" />
-            Lysogorski
-            <div class="developer">C# .NET Developer</div>
+    <!--Header Begins-->
+    <div id="topLayer" class="row col-">
+        <!--Logo Begins-->
+        <div id="logo" class="col-lg-2 col-3 col-s-4">
+            <a href="javascript:delay('../index.html')" onclick="animatePage();">
+                <div id="first">Richard</div>
+                <hr id="logoSlash" />
+                Lysogorski
+                <div id="developer">C# .NET Developer</div>
+            </a>
         </div>
-        <div class="socialBox col-lg-9 col-8 col-s-7">
-                <div class="swWrapper socialButtonOdd"><div class="socialWrapper"><img class="socialButton" src="../images/github.svg"></div></div>
-                <div class="swWrapper socialButtonEven"><div class="socialWrapper"><img class="socialButton" src="../images/linkedin.svg"></div></div>
-                <div class="swWrapper socialButtonOdd"><div class="socialWrapper"><img class="socialButton" src="../images/email.svg"></div></div>
-                <div class="swWrapper socialButtonEven"><div class="socialWrapper"><img class="socialButton" src="../images/cv.svg"></div></div>
-            
+        <!--Logo Ends-->
+        <!--Social Buttons Begin-->
+        <div class="socialBox col-lg-10 col-9 col-s-8">
+            <div><a href="https://github.com/rmlysogorski"><span class="socialButtonText">Github</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/github.svg" width="1.25em"></div></div></a></div>
+            <div><a href="https://www.linkedin.com/in/rmlysogorski/"><span class="socialButtonText">LinkedIn</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/linkedin.svg" width="1.25em"></div></div></a></div>
+            <div><a href="javascript:delay('../contact.html')" onclick="animatePage();"><span class="socialButtonText">E-mail</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/email.svg" width="1.25em"></div></div></a></div>
+            <div><span class="socialButtonText">Resume</span><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/cv.svg" width="1.25em"></div></div></div>
         </div>
+        <!--Social Buttons End-->
     </div>
-    <div class="row secondLayer"><div class="col-lg-12 col-12 col-s-12"></div></div>
-    <!--Body-->
+    <div id="secondLayer" class="row col-"></div>
+    <!--Header Ends-->
+    <!--Body Begins-->
     <div class="row">
-        <div class="parallaxBg parallax"></div>
-        <!--Nav Menu Begins-->
-        <div id='page' class="hide col-lg-12 col-12 col-s-12"></div>
-        <!--Nav Menu Ends-->
+        <!--Sets up the green background glow-->
+        <div id="screenBackground"></div>
+        <!--Page Content Begins-->
+        <div id='page' class="col-">
+            <script>
+                document.getElementById('page').classList.add('hide');    
+            </script>
+            <!--Modal Begins-->
+            <!--This sets up the overlay for viewing full-size images. Hidden by default-->
+            <div id="modal" class="modal">
+                <span id="close">&times;</span>
+                <a id="imgLink" href="#"><img id="modalImg" class="modal-content"></a>
+                <div id="caption">Click to download full-sized image.</div>
+            </div>
+            <!--Modal Ends-->
+            <!--Project Content Begins-->
+            <!--Sets up 'screen' as is the basis for the flicker animation-->
+            <div id="projectScreen"></div>
+            <div id="projectContainer">
+                <!--Sets up the background image for the project-->
+                <img id="projectImg" src="../images/projectImages/solitaire/solitaire.jpg">
+                <!--Sets up the 'X' in the corner that returns to the menu-->
+                <a href="javascript:delay('../index.html')"><div id="backX" class="backX">X</div></a>
+                <!--Hides the backX element for javascript animation-->
+                <script>
+                    document.getElementById('backX').classList.add('hide');
+                </script>
+                <!--Title Begins-->
+                <div id="projectTitle">>>Movie Database API<<<br />=================</div>
+                <!--Hides the 'title' element for javascript animation-->
+                <script>
+                    document.getElementById('projectTitle').classList.add('hide');    
+                </script>
+                <!--Title Ends-->
+                <!--Project Settings Begin-->
+                <div id="projectSettings" class="hide">
+                    <!--Element is hidden by default for non-JS browsers because these links toggle JS animations-->
+                    <a href='#' onclick="toggleFlicker();return false;">
+                            <label id='flicker' class="button" style="position: relative;">Screen Flicker</label>
+                    </a> /
+                    <a href='#' onclick="toggleButtonAnimation();return false;">
+                            <label class="button"  style="position: relative;">Link Animations</label>
+                    </a>
+                </div>
+                <!--Project Settings End-->
+                <!--Project Description Begins-->
+                <div id="projectDescriptionWrapper">
+                    <!--Hides the 'projectDescriptionWrapper' for javascript animations-->
+                    <script>
+                        document.getElementById('projectDescriptionWrapper').classList.add('hide');    
+                    </script>
+                    <div id="projectDescription" style="height: 100vh; width: 100%;text-align: center;">
+                        <img src="../images/projectImages/uc.png" alt="Under Construction" style="width: 250px;margin-top: 1em;" />
+                        <div style="height: 2.5em;"></div>
+                    </div>
+                </div>
+                <!--Project Description Ends-->
+            </div>
+        </div>
+        <!--Page Content Ends-->
     </div>
-    <!--Footer-->
-    <div class="row bottomSecondLayer"><div class="col-lg-12 col-12 col-s-12"></div></div>
-    <div class="row bottomFirstLayer"><div class="col-lg-12 col-12 col-s-12"></div>
+    <!--Body Ends-->
+    <!--Footer Begins-->
+    <div id="bottomSecondLayer" class="row col-"></div>
+    <div id="bottomFirstLayer" class="row col-">
+        <!--This div is hidden for over 600px width screens-->
         <div class="socialBoxBot col-">
-            <div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/github.svg"></div></div>
-            <div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/linkedin.svg"></div></div>
+            <a href="https://github.com/rmlysogorski"><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/github.svg"></div></div></a>
+            <a href="https://www.linkedin.com/in/rmlysogorski/"><div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/linkedin.svg"></div></div></a>
             <div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/email.svg"></div></div>
             <div class="swWrapper"><div class="socialWrapper"><img class="socialButton" src="../images/cv.svg"></div></div>
         </div>
     </div>
+    <!--Footer Ends-->
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
 <script src="../js/animations.js"></script>
+<script src="../js/toggles.js"></script>
+<script src="../js/slideshow.js"></script>
 </body>
 </html>

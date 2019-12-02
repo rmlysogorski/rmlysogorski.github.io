@@ -13,7 +13,9 @@ var backX = document.getElementById("backX");
 var imgLink = document.getElementById("imgLink"); //grabs the anchor tag for the image
 var closeX = document.getElementById("close"); //grabs the close 'X' for the modal
 
-activateSlideshow(slideIndex);
+if(slides[slideIndex] && slides[slideIndex].src.length > 1){
+    activateSlideshow(slideIndex);
+}
 
 function changeSlide(n) {
     activateSlideshow(slideIndex += n);
@@ -48,6 +50,5 @@ function activateSlideshow(n) {
 closeX.onclick = function() { 
     modal.style.display = "none";
     settings.style.visibility = 'visible';
-    captionText.style.visibility = 'hidden';
     backX.style.visibility = 'visible';
 }
