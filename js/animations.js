@@ -26,15 +26,11 @@ window.addEventListener("load", () => {
         x.onclick = function(){ animatePage(); }
         setTimeout(function(){ x.classList.add('backX-in')}, 2000);
     }
-
 });
 
 function animatePage(){
     var p = document.getElementById('page');
-
-    p.classList.add('animate_out');
-
-    
+    p.classList.add('animate_out');    
 }
 
 function delay (URL) {

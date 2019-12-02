@@ -150,6 +150,7 @@ a, a:link, a:visited, a:hover, a:active {
   color: inherit;
   text-decoration: inherit;
   font-weight: inherit;
+  font-family: 'Nova Round', cursive;
 }
 
 /*Set properties for the logo/name*/
@@ -191,7 +192,7 @@ a, a:link, a:visited, a:hover, a:active {
 
 .socialBoxBot{
   margin-top: 0.45em;
-  display: flex;
+  display: inline-flex;
   justify-content: space-around;
 }
 
@@ -511,8 +512,113 @@ links to make it easier to control the style*/
   color: gray;
 }
 
+.aboutX{
+  position: absolute;
+  font-size: 1em;
+  font-weight: 800;
+  text-shadow: 1px 1px rgba(3, 29, 0, 0.8);
+  z-index: 199;
+  right: 5vw;
+  top: 150px;
+  color: black;
+}
+
+.aboutX:hover{
+  color: gray;
+}
+
+#aboutWrapper{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  box-shadow: 0 0 5px whitesmoke;
+  padding: 5vw;
+  padding-top: 150px;
+  color: black;
+  font-size: 2em;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  
+}
+
+.aboutMe{
+  border: dashed 2px black;
+  padding: 0.15em;
+  width: fit-content;
+  font-size: 1.5em;
+}
+
+#profilePic{
+  float: left;
+  margin: 0;
+  margin-bottom: 1em;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px darkslategray;
+}
+
+.firstLetter{
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.aboutPara{
+  margin-bottom: 0.5em;
+}
+/* Glyph, by Harry Roberts */
+
+hr.style-eight {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+}
+hr.style-eight:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: rgb(240, 233, 233);
+}
+
+#imperialGarden{
+  float: right;
+  max-width: 450px;
+  height: auto;
+  object-fit: none;
+  object-position: center;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px darkslategray;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+#japanTeaching{
+  float: left;
+  max-width: 400px;
+  height: auto;
+  object-fit: none;
+  object-position: center;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px darkslategray;
+  margin-right: 1em;
+  margin-top: 1em;
+
+}
 
 @media only screen and (min-width: 600px) {
+  #profilePic{
+    max-width: 300px;
+    margin-right: 1em;
+  }
+  
   .backX{
     right: 15vw;
   }
@@ -542,10 +648,9 @@ links to make it easier to control the style*/
   }
 
   .socialBox{
-    display: flex;
+    display: inline-flex;
     margin-bottom: 0;
     margin-top: 1.25em;
-    justify-content: space-around;
   }
 
   .socialBoxBot{
@@ -563,7 +668,10 @@ links to make it easier to control the style*/
 }
 
 @media only screen and (min-width: 768px) {
-    
+  #profilePic{
+    max-width: 350px;
+  }
+
   #projectSettings{ 
     font-size: 1.25em
   }
@@ -584,6 +692,7 @@ links to make it easier to control the style*/
     font-size: 1.75em;
     margin-right: 0.35em;
     vertical-align: text-bottom;
+    display: inline-block;
   }
 }
 

@@ -17,6 +17,11 @@
 	animation: fade_in 2.5s ease;
 }
 
+.fade-out{
+	animation: fade_in 1s ease-in reverse;
+	visibility: hidden;
+}
+
 .fade-left{
 	visibility: visible;
 	animation: fade_left 3s ease;
