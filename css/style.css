@@ -617,11 +617,15 @@ hr.style-eight:after {
 }
 
 .resourceListItem{
-  font-size: 1.25em;
+  font-size: 1em;
   color: rgb(31, 31, 255);
 }
 
 @media only screen and (min-width: 600px) {
+  .resourceListItem{
+    font-size: 1.25em;
+  }
+
   .projectPara{
     font-size: 1.25em;
   }
@@ -913,7 +917,7 @@ hr.style-eight:after {
   right: 0;
   background: rgba(9, 9, 10, 0.2);
   opacity: 0;
-  z-index: 201;
+  z-index: 199;
   pointer-events: none;
   animation: flicker .5s infinite;
 }

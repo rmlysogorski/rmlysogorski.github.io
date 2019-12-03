@@ -90,12 +90,18 @@
                     <div id="projectDescription">
                         <!--Tech Utilized Begins-->
                         <div id="techList">
-                            <span class="techName">C#</span><span class="techName">|</span><span class="techName">Visual Studio</span>
+                            <span class="techName">C#</span><span class="techName">|</span><span class="techName">Visual Studio</span>|</span><span class="techName">XNA</span>
                         </div>
                         <!--Tech Utilized Ends-->
                         <div style="clear: both;"></div>
                         <h1 class="projectHeading">Objectives:</h1>
-                        <p class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
+                        <p class="projectPara">Every app I developed before this one was a web app, so the goal for this project was to try something
+                            a little different. Prior to finalizing my decision, I did a little research and discovered that the original Microsoft
+                            Solitaire was programmed by an intern with arguably too much time on his hands back in 1988.<a href="https://www.theverge.com/2017/4/13/15285780/windows-solitaire-original-bored-intern" style="color: rgb(31, 31, 255);">*</a>
+                            However, despite the fact that it was only a game, the program was eventually even endorsed by Bill Gates himself. 
+                            If it's good enough for a Microsoft intern, I figured it would provide more than a sufficient enough challenge for me. 
+                            And so that's exactly what I did - I developed my own version of Window's Solitaire using Microsoft's XNA framework. 
+                        </p>
                         <br />
                         <!--In the next section content is hidden or shown with javascript to enable a different no-JS layout-->
                         <!--Slideshow Begins-->
@@ -146,7 +152,13 @@
                         <!--Dots End-->
                         <!--Slideshow Ends-->
                         <h1 id="challenges2"  class="projectHeading hideCompletely">Challenges:</h1>
-                        <p id="challengesPara2" class="projectPara hideCompletely">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>
+                        <p id="challengesPara2" class="projectPara hideCompletely">
+                            Development on this started out pretty slow. If you've never programmed a game before, it's kind of a different beast
+                            to tame compared to web apps. First of all, the game engine updates itself ideally at a rate of 60 times per second. 
+                            This lends itself well to drawing animations on the screen, but it can be pretty confusing at first understanding that
+                            the program will check 60 times a second to see if, for example, two game objects have come into contact with each other
+                            (called a collision).
+                        </p>
                         <script>
                             document.getElementById('challenges2').classList.remove('hideCompletely');
                             document.getElementById('challengesPara2').classList.remove('hideCompletely');
