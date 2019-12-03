@@ -158,7 +158,7 @@ a, a:link, a:visited, a:hover, a:active {
   padding: 1em;
   padding-top: 0.5em;
   padding-bottom: 0;
-  font-size: 7em;
+  font-size: 2em;
   line-height: 1.05em;
   position: relative;
 
@@ -880,7 +880,7 @@ hr.style-eight:after {
 }
 
 .navigationContainer{
-  font-size: 1.5em;
+  font-size: 7.5em;
   border: none;
   color: rgb(71, 209, 58);
   margin: 1em;
