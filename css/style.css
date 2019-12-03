@@ -880,7 +880,7 @@ hr.style-eight:after {
 }
 
 .navigationContainer{
-  font-size: 7.5em;
+  font-size: 1.5em;
   border: none;
   color: rgb(71, 209, 58);
   margin: 1em;
@@ -934,7 +934,7 @@ hr.style-eight:after {
 
 @media only screen and (min-width: 600px) {
   .navigationContainer{
-    font-size: 2.5em;
+    font-size: 6.5em;
     padding-top: 3em;
   }
 
