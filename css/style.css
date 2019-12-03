@@ -485,6 +485,7 @@ links to make it easier to control the style*/
 }
 
 .projectPara{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 0.9em;
 }
 
@@ -559,11 +560,13 @@ links to make it easier to control the style*/
 }
 
 .firstLetter{
+  font-family: 'Nova Round', cursive;
   font-size: 2em;
   line-height: 1em;
 }
 
 .aboutPara{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-bottom: 0.5em;
 }
 /* Glyph, by Harry Roberts */
@@ -608,7 +611,21 @@ hr.style-eight:after {
   margin-bottom: 1em;
 }
 
+.resourceList{
+  list-style-type: circle;
+  text-indent: 1em;
+}
+
+.resourceListItem{
+  font-size: 1.25em;
+  color: rgb(31, 31, 255);
+}
+
 @media only screen and (min-width: 600px) {
+  .projectPara{
+    font-size: 1.25em;
+  }
+
   #aboutWrapper{
     font-size: 1.75em;
   }
