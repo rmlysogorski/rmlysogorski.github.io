@@ -892,7 +892,7 @@ hr.style-eight:after {
   padding-bottom: 3em;
   position: absolute;
   min-width: 100vw;
-  z-index: 100;
+  z-index: 50;
 }
 
 #projectScreen{
