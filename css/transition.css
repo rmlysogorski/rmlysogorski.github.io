@@ -128,7 +128,7 @@
 .animate_out{
 	animation: animate_out 1s ease;
 	height: 100vh;
-	transition: visibility 1s ease;
+	transition: visibility 0.8s ease;
 }
 
 @keyframes animate_out{

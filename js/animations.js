@@ -34,5 +34,5 @@ function animatePage(){
 }
 
 function delay (URL) {
-    setTimeout( function() { window.location = URL }, 900 );
+    setTimeout( function() { window.location = URL }, 800 );
 }
