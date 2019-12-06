@@ -31,6 +31,7 @@ window.addEventListener("load", () => {
 function animatePage(){
     var p = document.getElementById('page');
     p.classList.add('animate_out');    
+    setTime(function(){p.classList.add('hide')}, 900);
 }
 
 function delay (URL) {
