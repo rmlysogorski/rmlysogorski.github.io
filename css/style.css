@@ -646,6 +646,10 @@ hr.style-eight:after {
   #projectImg{
     max-width: 90vw;
   }
+
+  .smallProjectImg{
+    object-position: left !important;
+  }
   
   .projectHeading{
     font-size: 1.5em;
@@ -739,6 +743,10 @@ hr.style-eight:after {
   z-index: -50;
 }
 
+.smallProjectImg{
+  object-position: 10% 0 !important;
+}
+
 #fullImage{
   text-align: center;
 }
@@ -817,7 +825,7 @@ hr.style-eight:after {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 100; /* Sit on top */
-  padding-top: 200px; /* Location of the box */
+  padding-top: 150px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100vw; /* Full width */
@@ -827,30 +835,36 @@ hr.style-eight:after {
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+#modalFrame{
+  position: relative; 
+  max-width: 80vw; 
+  max-height: 60vh;
+  margin:auto;
+}
+
 /* Modal Content (image) */
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  width: 100%;
 }
 
 /* The Close Button */
 #close {
-  text-align: right;
-  margin: auto;
+  position: absolute;
+  right: 0;
+  top: -20px;
   display: block;
-  width: 80%;
-  max-width: 700px;
-  color: #f1f1f1;
+  color: gray;
   font-size: 40px;
+  line-height: 0.5;
   font-weight: bold;
   transition: 0.3s;
 }
 
 #close:hover,
 #close:focus {
-  color: #bbb;
+  color: whitesmoke;
   text-decoration: none;
   cursor: pointer;
 }
@@ -944,8 +958,20 @@ hr.style-eight:after {
   }
 
   .slideshowJS{
-    max-height: 350px;
+    max-height: 250px;
   }
+}
+
+@media only screen and (min-width: 768px) {
+    #modalFrame{
+    max-width: 500px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #modalFrame{
+  max-width: 700px;
+}
 }
 
 /*The flicker animation*/

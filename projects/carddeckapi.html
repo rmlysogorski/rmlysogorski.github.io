@@ -46,8 +46,10 @@
             <!--Modal Begins-->
             <!--This sets up the overlay for viewing full-size images. Hidden by default-->
             <div id="modal" class="modal">
-                <span id="close">&times;</span>
-                <a id="imgLink" href="#"><img id="modalImg" class="modal-content"></a>
+                <div id="modalFrame">
+                    <span id="close">&times;</span>
+                    <a id="imgLink" href="#"><img id="modalImg" class="modal-content"></a>
+                </div>
                 <div id="caption">Click to download full-sized image.</div>
             </div>
             <!--Modal Ends-->
@@ -56,7 +58,7 @@
             <div id="projectScreen"></div>
             <div id="projectContainer">
                 <!--Sets up the background image for the project-->
-                <img id="projectImg" src="../images/projectImages/solitaire/solitaire.jpg">
+                <img id="projectImg" class="smallProjectImg" src="../images/projectImages/cardAPI/cardAPI.png">
                 <!--Sets up the 'X' in the corner that returns to the menu-->
                 <a href="javascript:delay('../index.html')"><div id="backX" class="backX">X</div></a>
                 <!--Hides the backX element for javascript animation-->
@@ -87,8 +89,133 @@
                     <script>
                         document.getElementById('projectDescriptionWrapper').classList.add('hide');    
                     </script>
-                    <div id="projectDescription" style="height: 100vh; width: 100%;text-align: center;">
-                        <img src="../images/projectImages/uc.png" alt="Under Construction" style="width: 250px;margin-top: 1em;" />
+                    <div id="projectDescription">
+                        <!--Tech Utilized Begins-->
+                        <div id="techList">
+                            <span class="techName">C#</span><span class="techName">|</span><span class="techName">Visual Studio</span>|</span><span class="techName">XNA</span>
+                        </div>
+                        <!--Tech Utilized Ends-->
+                        <div style="clear: both;"></div>
+                        <h1 class="projectHeading">Objectives:</h1>
+                        <p class="projectPara">
+                            One of the projects we were assigned at Grand Circus was to find an api, any api, and we had one day to make a 
+                            web application based around it. My team, being the silly nerds we are, decided to use a Star Wars api and 
+                            build a simple app that let a user learn and discover things about the Star Wars universe and its characters 
+                            by navigating some drop down lists. We had so much fun with this project, that I decided to go ahead and do it
+                            again on my own when I got home. Thus, this Card Deck api project was born, and it was indeed inspiration for 
+                            the first application I made on my own after the bootcamp as well. 
+                        </p>
+                        <br />
+                        <!--In the next section content is hidden or shown with javascript to enable a different no-JS layout-->
+                        <!--Slideshow Begins-->
+                        <div id="fullImage" class="hideCompletely"><span>(Click for full image.)</span></div>
+                        <script>
+                            document.getElementById('fullImage').classList.remove('hideCompletely');
+                        </script>
+                        <div id="slideshow">
+                            <script>
+                                document.getElementById('slideshow').classList.add('slideshowJS');    
+                            </script>
+                            <img class="slide" src="../images/projectImages/cardAPI/cardAPI01.png" style="width:100%">
+                            <h1 id="challenges1" class="projectHeading">Challenges:</h1>
+                            <p id="challengesPara1" class="projectPara">
+                                The first challenge was to find an api to work with. I wanted something that would give me a new challenge. The api we
+                                used in our class project allowed us to consume a lot of information, but we didn't really have a chance to communicate 
+                                with the api for any other reason than retrieving that information. This made the deck of cards api, found at 
+                                <a href="https://deckofcardsapi.com/">deckofcardsapi.com</a> really appealing. You don't just get information to make a 
+                                deck of cards from the api, you can also use it to shuffle those cards, create discard piles and insert cards into them, 
+                                draw cards from your deck and list out the cards in each pile. There's a lot of fun stuff to play with here! 
+                            </p> 
+                            <p id="challengesPara1-2" class="projectPara">
+                                With challenge one out of the way, it was time to get started working - or was it?
+                                Here was an opportunity for another great challenge for myself. I had worked 
+                                with integrating apis into a .NET project several times before, and had just started 
+                                to learn javascript. So, why not learn how to integrate apis straight to the front end 
+                                using Ajax? To accomplish this, I found a nice code-along tutorial here: 
+                                <a href="https://hackersandslackers.com/making-ajax-calls-with-jquery/">Hackers and Slackers</a>.
+    
+                            </p>     
+                            <script>
+                                    document.getElementById('challenges1').classList.add('hideCompletely');
+                                    document.getElementById('challengesPara1').classList.add('hideCompletely');
+                                    document.getElementById('challengesPara1-2').classList.add('hideCompletely');
+                            </script>
+                            <img class="slide" src="../images/projectImages/cardAPI/cardAPI02.png" style="width:100%">
+                            <h1 id="takeaways1" class="projectHeading">Takeaways:</h1>
+                            <p id="takeawaysPara1" class="projectPara">
+                                Making api calls in this way turned out to be fairly easy. Just decide on the method and data type, 
+                                and plug in the url. Finally, call a function to manipulate the data if the request was successful.
+                                It is important to note, however, that this is perfectly acceptable for an api where security is not 
+                                an issue, but this method is certainly not secure. The card deck api doesn't require any authentication 
+                                or api keys when making a request, which subsequently made it a great api for a learning challenge of this nature. 
+                                Because I didn't need to worry about security, I could focus on committing the syntax to memory, and 
+                                figuring out what to do with it once I'd received the json data.                             </p>    
+                            <script>
+                                    document.getElementById('takeaways1').classList.add('hideCompletely');
+                                    document.getElementById('takeawaysPara1').classList.add('hideCompletely');
+                            </script>
+                            <img class="slide" src="../images/projectImages/cardAPI/cardAPI03.png" style="width:100%">
+                            <!--Buttons are hidden by default and enabled for javascript compatible browsers-->
+                            <button id="slideshowLeftButton" class="hide" onclick="changeSlide(-1)"><</button>
+                            <button id="slideshowRightButton" class="hide" onclick="changeSlide(1)">></button>
+                            <script>
+                                document.getElementById('slideshowLeftButton').classList.remove('hide');
+                                document.getElementById('slideshowRightButton').classList.remove('hide');
+                            </script>
+                        </div>
+                        <!--Dots Begin-->
+                        <div class="center">
+                            <!--Dots are hidden by default and enabled for javascript compatible browsers-->
+                            <span class="dot hide" onclick="currentSlide(0)"></span>
+                            <span class="dot hide" onclick="currentSlide(1)"></span>
+                            <span class="dot hide" onclick="currentSlide(2)"></span>
+                            <script>
+                                var dots = document.getElementsByClassName('dot');
+                                for(var i = 0; i < dots.length; i++){
+                                    dots[i].classList.remove('hide');
+                                }
+                            </script>
+                        </div>
+                        <!--Dots End-->
+                        <!--Slideshow Ends-->
+                        <h1 id="challenges2"  class="projectHeading hideCompletely">Challenges:</h1>
+                        <p id="challengesPara2" class="projectPara hideCompletely">
+                            The first challenge was to find an api to work with. I wanted something that would give me a new challenge. The api we
+                            used in our class project allowed us to consume a lot of information, but we didn't really have a chance to communicate 
+                            with the api for any other reason than retrieving that information. This made the deck of cards api, found at 
+                            <a href="https://deckofcardsapi.com/">deckofcardsapi.com</a> really appealing. You don't just get information to make a 
+                            deck of cards from the api, you can also use it to shuffle those cards, create discard piles and insert cards into them, 
+                            draw cards from your deck and list out the cards in each pile. There's a lot of fun stuff to play with here! 
+                        </p>
+                        <p id="challengesPara2-2" class="projectPara hideCompletely">
+                            With challenge one out of the way, it was time to get started working - or was it?
+                            Here was an opportunity for another great challenge for myself. I had worked 
+                            with integrating apis into a .NET project several times before, and had just started 
+                            to learn javascript. So, why not learn how to integrate apis straight to the front end 
+                            using Ajax? To accomplish this, I found a nice code-along tutorial here: 
+                            <a href="https://hackersandslackers.com/making-ajax-calls-with-jquery/">Hackers and Slackers</a>.
+
+                        </p>
+                        <script>
+                            document.getElementById('challenges2').classList.remove('hideCompletely');
+                            document.getElementById('challengesPara2').classList.remove('hideCompletely');
+                            document.getElementById('challengesPara2-2').classList.remove('hideCompletely');
+                        </script>
+                        <h1 id="takeaways2" class="projectHeading hideCompletely">Takeaways:</h1>
+                        <p id="takeawaysPara2" class="projectPara hideCompletely">
+                            Making api calls in this way turned out to be fairly easy. Just decide on the method and data type, 
+                            and plug in the url. Finally, call a function to manipulate the data if the request was successful.
+                            It is important to note, however, that this is perfectly acceptable for an api where security is not 
+                            an issue, but this method is certainly not secure. The card deck api doesn't require any authentication 
+                            or api keys when making a request, which subsequently made it a great api for a learning challenge of this nature. 
+                            Because I didn't need to worry about security, I could focus on committing the syntax to memory, and 
+                            figuring out what to do with it once I'd received the json data. 
+                        </p>
+                        <script>
+                            document.getElementById('takeaways2').classList.remove('hideCompletely');
+                            document.getElementById('takeawaysPara2').classList.remove('hideCompletely');
+                        </script>
+                        <p class="githubTextLink"><a href="https://github.com/rmlysogorski/Solitaire">Check it out on github</a></p>
                         <div style="height: 2.5em;"></div>
                     </div>
                 </div>
