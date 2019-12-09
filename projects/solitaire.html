@@ -166,7 +166,24 @@
                         </script>
                         <h1 id="takeaways2" class="projectHeading hideCompletely">Takeaways:</h1>
                         <p id="takeawaysPara2" class="projectPara hideCompletely">
-                            
+                            There were several takeaways from this one. First and foremost, was that while it is difficult to envision what a program 
+                            will end up looking like for someone without much experience, it's important to research and try to define an organizational 
+                            structure for the program before you start coding. I ended up having to refactor a lot of code as I went along because I didn't 
+                            spend enough time in the design phase. 
+
+                            The next takeaway is to make sure to follow the Single-Responsibilty principle of SOLID OOP. Though the principle is easy to 
+                            understand in theory, one class has one responsibility, in practice things can spiral into spaghetti fairly quickly without taking
+                            the time to back-up and look at the big picture. For example, when I first started writing this program, I put almost all of the deck
+                            logic into the Card class. It seemed logical at the time to put it there, but soon the class became about more than just managing 
+                            a card object, it was also responsible for logic concerning the deck in play and the overall flow of the game. Needless to say, it 
+                            became very bloated very fast. About halfway into development, I decided to refactor this class and split it to put the deck logic 
+                            and game system logic in their own classes, and the Card class handled logic only for interactions with a single Card object. Things 
+                            became much simpler after that.
+
+                            Finally, I'd like to end this one on a positive note. I coded this project using a framework that I had zero prior experience with. Despite that, I was able to create a finished 
+                            working project after researching the technology and learning it on my own. It was proof to me that this is indeed something I should pursue as more 
+                            than just a hobby. I was reminded that if we put in enough effort and stay motivated, we can accomplish 
+                            even the toughest challenges that we set for ourselves. 
                         </p>
                         <script>
                             document.getElementById('takeaways2').classList.remove('hideCompletely');
