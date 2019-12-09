@@ -116,17 +116,46 @@
                             </script>
                             <img class="slide" src="../images/projectImages/solitaire/solitaire01.jpg" style="width:100%">
                             <h1 id="challenges1" class="projectHeading">Challenges:</h1>
-                            <p id="challengesPara1" class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>    
+                            <p id="challengesPara1" class="projectPara">
+                                    Development on this started out pretty slow. If you've never programmed a game before, it's kind of a different beast
+                                    to tame compared to web apps. First of all, the game engine updates itself ideally at a rate of 60 times per second. 
+                                    This lends itself well to drawing animations on the screen, but it can be pretty confusing at first understanding that
+                                    the program will check 60 times a second to see if, for example, two game objects have come into contact with each other
+                                    (called a collision).
+                            </p>    
                             <script>
                                     document.getElementById('challenges1').classList.add('hideCompletely');
                                     document.getElementById('challengesPara1').classList.add('hideCompletely');
                             </script>
                             <img class="slide" src="../images/projectImages/solitaire/solitaire02.jpg" style="width:100%">
                             <h1 id="takeaways1" class="projectHeading">Takeaways:</h1>
-                            <p id="takeawaysPara1" class="projectPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a elit tempus, ornare turpis ut, tristique mi. Sed interdum magna vel odio blandit, quis finibus ipsum iaculis. Praesent semper rutrum velit quis auctor. Etiam eget luctus augue. Nullam lobortis justo semper elit ornare, sit amet interdum dolor lacinia. Sed luctus vulputate massa, at pretium felis malesuada at. Cras elementum tellus ex, quis fermentum tortor imperdiet quis. Nullam et eros commodo, maximus orci quis, sodales nunc. Nunc hendrerit ut velit id maximus. Praesent id vehicula justo. Pellentesque commodo tortor quis facilisis sodales. Mauris et ante in libero lobortis convallis. Etiam venenatis placerat eros, sed facilisis erat sollicitudin vel.</p>    
+                            <p id="takeawaysPara1" class="projectPara">
+                                    There were several takeaways from this one. First and foremost, was that while it is difficult to envision what a program 
+                                    will end up looking like for someone without much experience, it's important to research and try to define an organizational 
+                                    structure for the program before you start coding. I ended up having to refactor a lot of code as I went along because I didn't 
+                                    spend enough time in the design phase. 
+                            </p> 
+                            <p id="takeawaysPara1-2" class="projectPara">
+                                    The next takeaway is to make sure to follow the Single-Responsibilty principle of SOLID OOP. Though the principle is easy to 
+                                    understand in theory, one class has one responsibility, in practice things can spiral into spaghetti fairly quickly without taking
+                                    the time to back-up and look at the big picture. For example, when I first started writing this program, I put almost all of the deck
+                                    logic into the Card class. It seemed logical at the time to put it there, but soon the class became about more than just managing 
+                                    a card object, it was also responsible for logic concerning the deck in play and the overall flow of the game. Needless to say, it 
+                                    became very bloated very fast. About halfway into development, I decided to refactor this class and split it to put the deck logic 
+                                    and game system logic in their own classes, and the Card class handled logic only for interactions with a single Card object. Things 
+                                    became much simpler after that.
+                            </p> 
+                            <p id="takeawaysPara1-3" class="projectPara">
+                                    Finally, I'd like to end this one on a positive note. I coded this project using a framework that I had zero prior experience with. Despite that, I was able to create a finished 
+                                    working project after researching the technology and learning it on my own. It was proof to me that this is indeed something I should pursue as more 
+                                    than just a hobby. I was reminded that if we put in enough effort and stay motivated, we can accomplish 
+                                    even the toughest challenges that we set for ourselves. 
+                            </p>    
                             <script>
                                     document.getElementById('takeaways1').classList.add('hideCompletely');
                                     document.getElementById('takeawaysPara1').classList.add('hideCompletely');
+                                    document.getElementById('takeawaysPara1-2').classList.add('hideCompletely');
+                                    document.getElementById('takeawaysPara1-3').classList.add('hideCompletely');
                             </script>
                             <img class="slide" src="../images/projectImages/solitaire/solitaire03.PNG" style="width:100%">
                             <!--Buttons are hidden by default and enabled for javascript compatible browsers-->
@@ -170,7 +199,8 @@
                             will end up looking like for someone without much experience, it's important to research and try to define an organizational 
                             structure for the program before you start coding. I ended up having to refactor a lot of code as I went along because I didn't 
                             spend enough time in the design phase. 
-
+                        </p>
+                        <p id="takeawaysPara2-2" class="projectPara hideCompletely">
                             The next takeaway is to make sure to follow the Single-Responsibilty principle of SOLID OOP. Though the principle is easy to 
                             understand in theory, one class has one responsibility, in practice things can spiral into spaghetti fairly quickly without taking
                             the time to back-up and look at the big picture. For example, when I first started writing this program, I put almost all of the deck
@@ -179,7 +209,8 @@
                             became very bloated very fast. About halfway into development, I decided to refactor this class and split it to put the deck logic 
                             and game system logic in their own classes, and the Card class handled logic only for interactions with a single Card object. Things 
                             became much simpler after that.
-
+                        </p>
+                        <p id="takeawaysPara2-3" class="projectPara hideCompletely">
                             Finally, I'd like to end this one on a positive note. I coded this project using a framework that I had zero prior experience with. Despite that, I was able to create a finished 
                             working project after researching the technology and learning it on my own. It was proof to me that this is indeed something I should pursue as more 
                             than just a hobby. I was reminded that if we put in enough effort and stay motivated, we can accomplish 
@@ -188,6 +219,8 @@
                         <script>
                             document.getElementById('takeaways2').classList.remove('hideCompletely');
                             document.getElementById('takeawaysPara2').classList.remove('hideCompletely');
+                            document.getElementById('takeawaysPara2-2').classList.remove('hideCompletely');
+                            document.getElementById('takeawaysPara2-3').classList.remove('hideCompletely');
                         </script>
                         <p class="githubTextLink"><a href="https://github.com/rmlysogorski/Solitaire">Check it out on github</a></p>
                         <div style="height: 2.5em;"></div>
